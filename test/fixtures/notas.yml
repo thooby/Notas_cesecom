@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  credito_id: 1
+  tipo_nota_id: 1
+  fecha_nota: 2010-07-17
+  calificacion: 1
+
+two:
+  credito_id: 1
+  tipo_nota_id: 1
+  fecha_nota: 2010-07-17
+  calificacion: 1

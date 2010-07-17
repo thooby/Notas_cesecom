@@ -1,0 +1,22 @@
+<h1>Listing creditos</h1>
+
+<table>
+  <tr>
+    <th>Estudiante</th>
+    <th>Curso</th>
+  </tr>
+
+<% @creditos.each do |credito| %>
+  <tr>
+    <td><%=h credito.estudiante_id %></td>
+    <td><%=h credito.curso_id %></td>
+    <td><%= link_to 'Show', credito %></td>
+    <td><%= link_to 'Edit', edit_credito_path(credito) %></td>
+    <td><%= link_to 'Destroy', credito, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New credito', new_credito_path %>

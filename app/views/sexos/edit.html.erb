@@ -1,0 +1,16 @@
+<h1>Editing sexo</h1>
+
+<% form_for(@sexo) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @sexo %> |
+<%= link_to 'Back', sexos_path %>

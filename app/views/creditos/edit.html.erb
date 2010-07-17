@@ -1,0 +1,20 @@
+<h1>Editing credito</h1>
+
+<% form_for(@credito) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :estudiante_id %><br />
+    <%= f.text_field :estudiante_id %>
+  </p>
+  <p>
+    <%= f.label :curso_id %><br />
+    <%= f.text_field :curso_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @credito %> |
+<%= link_to 'Back', creditos_path %>

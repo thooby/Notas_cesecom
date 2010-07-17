@@ -1,0 +1,23 @@
+<p>
+  <b>Credito:</b>
+  <%=h @nota.credito_id %>
+</p>
+
+<p>
+  <b>Tipo nota:</b>
+  <%=h @nota.tipo_nota_id %>
+</p>
+
+<p>
+  <b>Fecha nota:</b>
+  <%=h @nota.fecha_nota %>
+</p>
+
+<p>
+  <b>Calificacion:</b>
+  <%=h @nota.calificacion %>
+</p>
+
+
+<%= link_to 'Edit', edit_nota_path(@nota) %> |
+<%= link_to 'Back', notas_path %>

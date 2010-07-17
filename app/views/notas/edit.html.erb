@@ -1,0 +1,28 @@
+<h1>Editing nota</h1>
+
+<% form_for(@nota) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :credito_id %><br />
+    <%= f.text_field :credito_id %>
+  </p>
+  <p>
+    <%= f.label :tipo_nota_id %><br />
+    <%= f.text_field :tipo_nota_id %>
+  </p>
+  <p>
+    <%= f.label :fecha_nota %><br />
+    <%= f.date_select :fecha_nota %>
+  </p>
+  <p>
+    <%= f.label :calificacion %><br />
+    <%= f.text_field :calificacion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @nota %> |
+<%= link_to 'Back', notas_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  materia_id: 1
+  fecha_inicio: 2010-07-17
+  fecha_finalizacion: 2010-07-17
+  nivel_id: 1
+  horario: MyString
+  docente_id: 1
+
+two:
+  materia_id: 1
+  fecha_inicio: 2010-07-17
+  fecha_finalizacion: 2010-07-17
+  nivel_id: 1
+  horario: MyString
+  docente_id: 1

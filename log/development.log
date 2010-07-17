@@ -1,0 +1,1119 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEstudiantes (20100717014856)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "estudiantes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre1" varchar(255), "nombre2" varchar(255), "apellido1" varchar(255), "apellido2" varchar(255), "email" varchar(255), "sexo_id" integer, "cedula" varchar(255), "fecha_nac" date, "lugar_nac" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717014856')[0m
+Migrating to CreateDocentes (20100717014858)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "docentes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre1" varchar(255), "nombre2" varchar(255), "apellido1" varchar(255), "apellido2" varchar(255), "email" varchar(255), "sexo_id" integer, "cedula" varchar(255), "fecha_nac" date, "lugar_nac" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717014858')[0m
+Migrating to CreateCreditos (20100717014900)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "creditos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "estudiante_id" integer, "curso_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717014900')[0m
+Migrating to CreateNotas (20100717014902)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "notas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "credito_id" integer, "tipo_nota_id" integer, "fecha_nota" date, "calificacion" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717014902')[0m
+Migrating to CreateTipoNotas (20100717014904)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "tipo_notas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descripcion" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717014904')[0m
+Migrating to CreateCursos (20100717014906)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "cursos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "materia_id" integer, "fecha_inicio" date, "fecha_finalizacion" date, "nivel_id" integer, "horario" varchar(255), "docente_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717014906')[0m
+Migrating to CreateMaterias (20100717014908)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "materias" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar(255), "descripcion" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717014908')[0m
+Migrating to CreateNivels (20100717014910)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "nivels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descripcion" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717014910')[0m
+Migrating to CreateSexos (20100717014913)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "sexos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descripcion" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717014913')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("creditos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cursos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("docentes")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("estudiantes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("materias")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("nivels")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("notas")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sexos")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("tipo_notas")[0m
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-17 04:04:02) [GET]
+
+SyntaxError (/Users/zubi/notas_cesecom/app/models/estudiante.rb:3: syntax error, unexpected ':', expecting kEND
+  has_many :cursos :through => creditos
+                    ^):
+  app/controllers/estudiantes_controller.rb:5:in `index'
+
+Rendered rescues/_trace (117.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-17 04:04:53) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `creditos' for #<Class:0x103494450>):
+  app/models/estudiante.rb:3
+  app/controllers/estudiantes_controller.rb:5:in `index'
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-17 04:05:53) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `creditos' for #<Class:0x1030f8b20>):
+  app/models/estudiante.rb:3
+  app/controllers/estudiantes_controller.rb:5:in `index'
+
+Rendered rescues/_trace (122.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-17 04:06:16) [GET]
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `creditos' for #<Class:0x1033f4fe0>):
+  app/models/estudiante.rb:3
+  app/controllers/estudiantes_controller.rb:5:in `index'
+
+Rendered rescues/_trace (41.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-17 04:07:11) [GET]
+  [4;36;1mEstudiante Load (0.6ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+Completed in 189ms (View: 96, DB: 1) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-17 04:07:15) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+Completed in 34ms (View: 26, DB: 0) | 200 OK [http://localhost/estudiantes/new]
+
+
+Processing EstudiantesController#create (for 127.0.0.1 at 2010-07-17 04:07:30) [POST]
+  Parameters: {"estudiante"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"2010", "fecha_nac(2i)"=>"7", "sexo_id"=>"", "fecha_nac(3i)"=>"17", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"Pedro"}, "commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k="}
+  [4;35;1mEstudiante Create (0.5ms)[0m   [0mINSERT INTO "estudiantes" ("nombre2", "cedula", "fecha_nac", "created_at", "updated_at", "lugar_nac", "sexo_id", "apellido1", "apellido2", "nombre1", "email") VALUES('', '', '2010-07-17', '2010-07-17 02:07:30', '2010-07-17 02:07:30', '', NULL, '', '', 'Pedro', '')[0m
+Redirected to http://localhost:3000/estudiantes/1
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-17 04:07:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEstudiante Load (0.3ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/estudiantes/1]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-17 04:07:34) [GET]
+  [4;35;1mEstudiante Load (0.8ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-17 04:07:36) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://localhost/estudiantes/new]
+
+
+Processing EstudiantesController#create (for 127.0.0.1 at 2010-07-17 04:07:46) [POST]
+  Parameters: {"estudiante"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"2010", "fecha_nac(2i)"=>"7", "sexo_id"=>"", "fecha_nac(3i)"=>"17", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"Maria"}, "commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k="}
+  [4;36;1mEstudiante Create (0.4ms)[0m   [0;1mINSERT INTO "estudiantes" ("nombre2", "cedula", "fecha_nac", "created_at", "updated_at", "lugar_nac", "sexo_id", "apellido1", "apellido2", "nombre1", "email") VALUES('', '', '2010-07-17', '2010-07-17 02:07:46', '2010-07-17 02:07:46', '', NULL, '', '', 'Maria', '')[0m
+Redirected to http://localhost:3000/estudiantes/2
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-17 04:07:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEstudiante Load (0.5ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/estudiantes/2]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-17 04:08:04) [GET]
+  [4;36;1mCurso Load (0.6ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+Rendering template within layouts/cursos
+Rendering cursos/index
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/cursos]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-17 04:08:07) [GET]
+Rendering template within layouts/cursos
+Rendering cursos/new
+Completed in 28ms (View: 20, DB: 0) | 200 OK [http://localhost/cursos/new]
+
+
+Processing CursosController#create (for 127.0.0.1 at 2010-07-17 04:08:24) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "curso"=>{"fecha_inicio(3i)"=>"17", "fecha_finalizacion(1i)"=>"2010", "materia_id"=>"1", "fecha_finalizacion(2i)"=>"7", "fecha_finalizacion(3i)"=>"17", "horario"=>"", "nivel_id"=>"1", "docente_id"=>"1", "fecha_inicio(1i)"=>"2010", "fecha_inicio(2i)"=>"7"}}
+  [4;35;1mCurso Create (0.4ms)[0m   [0mINSERT INTO "cursos" ("fecha_inicio", "materia_id", "created_at", "fecha_finalizacion", "updated_at", "nivel_id", "horario", "docente_id") VALUES('2010-07-17', 1, '2010-07-17 02:08:24', '2010-07-17', '2010-07-17 02:08:24', 1, '', 1)[0m
+Redirected to http://localhost:3000/cursos/1
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/cursos]
+
+
+Processing CursosController#show (for 127.0.0.1 at 2010-07-17 04:08:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+Rendering template within layouts/cursos
+Rendering cursos/show
+Completed in 100ms (View: 91, DB: 0) | 200 OK [http://localhost/cursos/1]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-17 04:08:30) [GET]
+  [4;35;1mCurso Load (0.7ms)[0m   [0mSELECT * FROM "cursos" [0m
+Rendering template within layouts/cursos
+Rendering cursos/index
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/cursos]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-17 04:08:33) [GET]
+Rendering template within layouts/cursos
+Rendering cursos/new
+Completed in 23ms (View: 15, DB: 0) | 200 OK [http://localhost/cursos/new]
+
+
+Processing CursosController#create (for 127.0.0.1 at 2010-07-17 04:08:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "curso"=>{"fecha_inicio(3i)"=>"17", "fecha_finalizacion(1i)"=>"2010", "materia_id"=>"1", "fecha_finalizacion(2i)"=>"7", "fecha_finalizacion(3i)"=>"17", "horario"=>"", "nivel_id"=>"2", "docente_id"=>"1", "fecha_inicio(1i)"=>"2010", "fecha_inicio(2i)"=>"7"}}
+  [4;36;1mCurso Create (0.4ms)[0m   [0;1mINSERT INTO "cursos" ("fecha_inicio", "materia_id", "created_at", "fecha_finalizacion", "updated_at", "nivel_id", "horario", "docente_id") VALUES('2010-07-17', 1, '2010-07-17 02:08:45', '2010-07-17', '2010-07-17 02:08:45', 2, '', 1)[0m
+Redirected to http://localhost:3000/cursos/2
+Completed in 67ms (DB: 0) | 302 Found [http://localhost/cursos]
+
+
+Processing CursosController#show (for 127.0.0.1 at 2010-07-17 04:08:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+Rendering template within layouts/cursos
+Rendering cursos/show
+Completed in 96ms (View: 4, DB: 0) | 200 OK [http://localhost/cursos/2]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-17 04:08:48) [GET]
+  [4;36;1mCurso Load (0.8ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+Rendering template within layouts/cursos
+Rendering cursos/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/cursos]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-17 04:08:50) [GET]
+Rendering template within layouts/cursos
+Rendering cursos/new
+Completed in 23ms (View: 15, DB: 0) | 200 OK [http://localhost/cursos/new]
+
+
+Processing CursosController#create (for 127.0.0.1 at 2010-07-17 04:09:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "curso"=>{"fecha_inicio(3i)"=>"17", "fecha_finalizacion(1i)"=>"2010", "materia_id"=>"2", "fecha_finalizacion(2i)"=>"7", "fecha_finalizacion(3i)"=>"17", "horario"=>"", "nivel_id"=>"1", "docente_id"=>"1", "fecha_inicio(1i)"=>"2010", "fecha_inicio(2i)"=>"7"}}
+  [4;35;1mCurso Create (0.4ms)[0m   [0mINSERT INTO "cursos" ("fecha_inicio", "materia_id", "created_at", "fecha_finalizacion", "updated_at", "nivel_id", "horario", "docente_id") VALUES('2010-07-17', 2, '2010-07-17 02:09:03', '2010-07-17', '2010-07-17 02:09:03', 1, '', 1)[0m
+Redirected to http://localhost:3000/cursos/3
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/cursos]
+
+
+Processing CursosController#show (for 127.0.0.1 at 2010-07-17 04:09:03) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+Rendering template within layouts/cursos
+Rendering cursos/show
+Completed in 97ms (View: 4, DB: 0) | 200 OK [http://localhost/cursos/3]
+
+
+Processing CreditosController#index (for 127.0.0.1 at 2010-07-17 04:09:19) [GET]
+  [4;35;1mCredito Load (0.6ms)[0m   [0mSELECT * FROM "creditos" [0m
+Rendering template within layouts/creditos
+Rendering creditos/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/creditos]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-17 04:09:24) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/creditos/new]
+
+
+Processing CreditosController#create (for 127.0.0.1 at 2010-07-17 04:09:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "credito"=>{"curso_id"=>"1", "estudiante_id"=>"1"}}
+  [4;36;1mCredito Create (0.4ms)[0m   [0;1mINSERT INTO "creditos" ("created_at", "updated_at", "estudiante_id", "curso_id") VALUES('2010-07-17 02:09:31', '2010-07-17 02:09:31', 1, 1)[0m
+Redirected to http://localhost:3000/creditos/1
+Completed in 59ms (DB: 0) | 302 Found [http://localhost/creditos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-17 04:09:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+Rendering template within layouts/creditos
+Rendering creditos/show
+Completed in 98ms (View: 7, DB: 0) | 200 OK [http://localhost/creditos/1]
+
+
+Processing CreditosController#index (for 127.0.0.1 at 2010-07-17 04:09:33) [GET]
+  [4;36;1mCredito Load (0.7ms)[0m   [0;1mSELECT * FROM "creditos" [0m
+Rendering template within layouts/creditos
+Rendering creditos/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/creditos]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-17 04:09:35) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/creditos/new]
+
+
+Processing CreditosController#create (for 127.0.0.1 at 2010-07-17 04:09:42) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "credito"=>{"curso_id"=>"3", "estudiante_id"=>"1"}}
+  [4;35;1mCredito Create (0.4ms)[0m   [0mINSERT INTO "creditos" ("created_at", "updated_at", "estudiante_id", "curso_id") VALUES('2010-07-17 02:09:42', '2010-07-17 02:09:42', 1, 3)[0m
+Redirected to http://localhost:3000/creditos/2
+Completed in 61ms (DB: 0) | 302 Found [http://localhost/creditos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-17 04:09:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 2) [0m
+Rendering template within layouts/creditos
+Rendering creditos/show
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/creditos/2]
+
+
+Processing CreditosController#index (for 127.0.0.1 at 2010-07-17 04:09:45) [GET]
+  [4;35;1mCredito Load (0.7ms)[0m   [0mSELECT * FROM "creditos" [0m
+Rendering template within layouts/creditos
+Rendering creditos/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/creditos]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-17 04:09:46) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/creditos/new]
+
+
+Processing CreditosController#create (for 127.0.0.1 at 2010-07-17 04:09:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "credito"=>{"curso_id"=>"2", "estudiante_id"=>"2"}}
+  [4;36;1mCredito Create (0.5ms)[0m   [0;1mINSERT INTO "creditos" ("created_at", "updated_at", "estudiante_id", "curso_id") VALUES('2010-07-17 02:09:54', '2010-07-17 02:09:54', 2, 2)[0m
+Redirected to http://localhost:3000/creditos/3
+Completed in 65ms (DB: 0) | 302 Found [http://localhost/creditos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-17 04:09:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 3) [0m
+Rendering template within layouts/creditos
+Rendering creditos/show
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/creditos/3]
+
+
+Processing NotasController#index (for 127.0.0.1 at 2010-07-17 04:10:02) [GET]
+  [4;36;1mNota Load (0.6ms)[0m   [0;1mSELECT * FROM "notas" [0m
+Rendering template within layouts/notas
+Rendering notas/index
+Completed in 95ms (View: 11, DB: 1) | 200 OK [http://localhost/notas]
+
+
+Processing NotasController#new (for 127.0.0.1 at 2010-07-17 04:10:06) [GET]
+Rendering template within layouts/notas
+Rendering notas/new
+Completed in 23ms (View: 16, DB: 0) | 200 OK [http://localhost/notas/new]
+
+
+Processing NotasController#create (for 127.0.0.1 at 2010-07-17 04:10:17) [POST]
+  Parameters: {"commit"=>"Create", "nota"=>{"calificacion"=>"9", "fecha_nota(1i)"=>"2010", "tipo_nota_id"=>"1", "fecha_nota(2i)"=>"7", "fecha_nota(3i)"=>"17", "credito_id"=>"1"}, "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k="}
+  [4;35;1mNota Create (0.4ms)[0m   [0mINSERT INTO "notas" ("created_at", "calificacion", "updated_at", "tipo_nota_id", "credito_id", "fecha_nota") VALUES('2010-07-17 02:10:17', 9, '2010-07-17 02:10:17', 1, 1, '2010-07-17')[0m
+Redirected to http://localhost:3000/notas/1
+Completed in 39ms (DB: 0) | 302 Found [http://localhost/notas]
+
+
+Processing NotasController#show (for 127.0.0.1 at 2010-07-17 04:10:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mNota Load (0.3ms)[0m   [0;1mSELECT * FROM "notas" WHERE ("notas"."id" = 1) [0m
+Rendering template within layouts/notas
+Rendering notas/show
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/notas/1]
+
+
+Processing NotasController#index (for 127.0.0.1 at 2010-07-17 04:10:20) [GET]
+  [4;35;1mNota Load (0.8ms)[0m   [0mSELECT * FROM "notas" [0m
+Rendering template within layouts/notas
+Rendering notas/index
+Completed in 93ms (View: 7, DB: 1) | 200 OK [http://localhost/notas]
+
+
+Processing NotasController#new (for 127.0.0.1 at 2010-07-17 04:10:21) [GET]
+Rendering template within layouts/notas
+Rendering notas/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/notas/new]
+
+
+Processing NotasController#create (for 127.0.0.1 at 2010-07-17 04:10:33) [POST]
+  Parameters: {"commit"=>"Create", "nota"=>{"calificacion"=>"7", "fecha_nota(1i)"=>"2010", "tipo_nota_id"=>"1", "fecha_nota(2i)"=>"7", "fecha_nota(3i)"=>"17", "credito_id"=>"2"}, "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k="}
+  [4;36;1mNota Create (425.3ms)[0m   [0;1mINSERT INTO "notas" ("created_at", "calificacion", "updated_at", "tipo_nota_id", "credito_id", "fecha_nota") VALUES('2010-07-17 02:10:33', 7, '2010-07-17 02:10:33', 1, 2, '2010-07-17')[0m
+Redirected to http://localhost:3000/notas/2
+Completed in 440ms (DB: 425) | 302 Found [http://localhost/notas]
+
+
+Processing NotasController#show (for 127.0.0.1 at 2010-07-17 04:10:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mNota Load (0.2ms)[0m   [0mSELECT * FROM "notas" WHERE ("notas"."id" = 2) [0m
+Rendering template within layouts/notas
+Rendering notas/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/notas/2]
+
+
+Processing NotasController#edit (for 127.0.0.1 at 2010-07-17 04:10:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mNota Load (0.3ms)[0m   [0;1mSELECT * FROM "notas" WHERE ("notas"."id" = 2) [0m
+Rendering template within layouts/notas
+Rendering notas/edit
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/notas/2/edit]
+
+
+Processing NotasController#index (for 127.0.0.1 at 2010-07-17 04:10:44) [GET]
+  [4;35;1mNota Load (0.9ms)[0m   [0mSELECT * FROM "notas" [0m
+Rendering template within layouts/notas
+Rendering notas/index
+Completed in 115ms (View: 13, DB: 1) | 200 OK [http://localhost/notas]
+
+
+Processing NotasController#new (for 127.0.0.1 at 2010-07-17 04:10:45) [GET]
+Rendering template within layouts/notas
+Rendering notas/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/notas/new]
+
+
+Processing NotasController#create (for 127.0.0.1 at 2010-07-17 04:10:56) [POST]
+  Parameters: {"commit"=>"Create", "nota"=>{"calificacion"=>"3", "fecha_nota(1i)"=>"2010", "tipo_nota_id"=>"1", "fecha_nota(2i)"=>"7", "fecha_nota(3i)"=>"17", "credito_id"=>"3"}, "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k="}
+  [4;36;1mNota Create (0.5ms)[0m   [0;1mINSERT INTO "notas" ("created_at", "calificacion", "updated_at", "tipo_nota_id", "credito_id", "fecha_nota") VALUES('2010-07-17 02:10:56', 3, '2010-07-17 02:10:56', 1, 3, '2010-07-17')[0m
+Redirected to http://localhost:3000/notas/3
+Completed in 140ms (DB: 1) | 302 Found [http://localhost/notas]
+
+
+Processing NotasController#show (for 127.0.0.1 at 2010-07-17 04:10:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mNota Load (0.4ms)[0m   [0mSELECT * FROM "notas" WHERE ("notas"."id" = 3) [0m
+Rendering template within layouts/notas
+Rendering notas/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/notas/3]
+  [4;36;1mEstudiante Load (0.9ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+  [4;35;1mCurso Load (0.6ms)[0m   [0mSELECT "cursos".* FROM "cursos" INNER JOIN "creditos" ON "cursos".id = "creditos".curso_id WHERE (("creditos".estudiante_id = 1)) [0m
+  [4;36;1mCredito Load (0.6ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos".estudiante_id = 1) [0m
+  [4;35;1mNota Load (0.5ms)[0m   [0mSELECT * FROM "notas" WHERE ("notas".credito_id = 1) [0m
+  [4;36;1mCredito Load (0.7ms)[0m   [0;1mSELECT * FROM "creditos" [0m
+  [4;35;1mCurso Load (0.8ms)[0m   [0mSELECT * FROM "cursos" [0m
+  [4;36;1mCredito Load (0.5ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos".curso_id = 1) [0m
+  [4;35;1mNota Load (0.4ms)[0m   [0mSELECT * FROM "notas" WHERE ("notas".credito_id = 1) [0m
+
+
+Processing TipoNotasController#index (for 127.0.0.1 at 2010-07-17 04:42:16) [GET]
+  [4;36;1mTipoNota Load (0.6ms)[0m   [0;1mSELECT * FROM "tipo_notas" [0m
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/index
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/tipo_notas]
+
+
+Processing TipoNotasController#new (for 127.0.0.1 at 2010-07-17 04:42:19) [GET]
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/new
+Completed in 91ms (View: 12, DB: 0) | 200 OK [http://localhost/tipo_notas/new]
+
+
+Processing TipoNotasController#create (for 127.0.0.1 at 2010-07-17 04:42:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "tipo_nota"=>{"descripcion"=>"Primera"}}
+  [4;35;1mTipoNota Create (0.5ms)[0m   [0mINSERT INTO "tipo_notas" ("created_at", "updated_at", "descripcion") VALUES('2010-07-17 02:42:52', '2010-07-17 02:42:52', 'Primera')[0m
+Redirected to http://localhost:3000/tipo_notas/1
+Completed in 62ms (DB: 0) | 302 Found [http://localhost/tipo_notas]
+
+
+Processing TipoNotasController#show (for 127.0.0.1 at 2010-07-17 04:42:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTipoNota Load (0.4ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/show
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/tipo_notas/1]
+
+
+Processing TipoNotasController#index (for 127.0.0.1 at 2010-07-17 04:42:55) [GET]
+  [4;35;1mTipoNota Load (0.7ms)[0m   [0mSELECT * FROM "tipo_notas" [0m
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/tipo_notas]
+
+
+Processing TipoNotasController#new (for 127.0.0.1 at 2010-07-17 04:42:57) [GET]
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/tipo_notas/new]
+
+
+Processing TipoNotasController#create (for 127.0.0.1 at 2010-07-17 04:43:04) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "tipo_nota"=>{"descripcion"=>"Segunda"}}
+  [4;36;1mTipoNota Create (0.4ms)[0m   [0;1mINSERT INTO "tipo_notas" ("created_at", "updated_at", "descripcion") VALUES('2010-07-17 02:43:04', '2010-07-17 02:43:04', 'Segunda')[0m
+Redirected to http://localhost:3000/tipo_notas/2
+Completed in 61ms (DB: 0) | 302 Found [http://localhost/tipo_notas]
+
+
+Processing TipoNotasController#show (for 127.0.0.1 at 2010-07-17 04:43:04) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTipoNota Load (0.3ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 2) [0m
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/show
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/tipo_notas/2]
+
+
+Processing TipoNotasController#index (for 127.0.0.1 at 2010-07-17 04:43:06) [GET]
+  [4;36;1mTipoNota Load (0.7ms)[0m   [0;1mSELECT * FROM "tipo_notas" [0m
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/tipo_notas]
+
+
+Processing TipoNotasController#new (for 127.0.0.1 at 2010-07-17 04:43:07) [GET]
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/tipo_notas/new]
+
+
+Processing TipoNotasController#create (for 127.0.0.1 at 2010-07-17 04:43:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "tipo_nota"=>{"descripcion"=>"Tercera"}}
+  [4;35;1mTipoNota Create (0.4ms)[0m   [0mINSERT INTO "tipo_notas" ("created_at", "updated_at", "descripcion") VALUES('2010-07-17 02:43:14', '2010-07-17 02:43:14', 'Tercera')[0m
+Redirected to http://localhost:3000/tipo_notas/3
+Completed in 61ms (DB: 0) | 302 Found [http://localhost/tipo_notas]
+
+
+Processing TipoNotasController#show (for 127.0.0.1 at 2010-07-17 04:43:14) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mTipoNota Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 3) [0m
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/tipo_notas/3]
+
+
+Processing TipoNotasController#index (for 127.0.0.1 at 2010-07-17 04:43:17) [GET]
+  [4;35;1mTipoNota Load (0.8ms)[0m   [0mSELECT * FROM "tipo_notas" [0m
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/index
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/tipo_notas]
+
+
+Processing TipoNotasController#new (for 127.0.0.1 at 2010-07-17 04:43:20) [GET]
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/tipo_notas/new]
+
+
+Processing TipoNotasController#create (for 127.0.0.1 at 2010-07-17 04:43:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "tipo_nota"=>{"descripcion"=>"Final"}}
+  [4;36;1mTipoNota Create (0.4ms)[0m   [0;1mINSERT INTO "tipo_notas" ("created_at", "updated_at", "descripcion") VALUES('2010-07-17 02:43:28', '2010-07-17 02:43:28', 'Final')[0m
+Redirected to http://localhost:3000/tipo_notas/4
+Completed in 64ms (DB: 0) | 302 Found [http://localhost/tipo_notas]
+
+
+Processing TipoNotasController#show (for 127.0.0.1 at 2010-07-17 04:43:28) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTipoNota Load (0.4ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 4) [0m
+Rendering template within layouts/tipo_notas
+Rendering tipo_notas/show
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/tipo_notas/4]
+
+
+Processing SexosController#index (for 127.0.0.1 at 2010-07-17 04:43:36) [GET]
+  [4;36;1mSexo Load (0.6ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendering template within layouts/sexos
+Rendering sexos/index
+Completed in 94ms (View: 10, DB: 1) | 200 OK [http://localhost/sexos]
+
+
+Processing SexosController#new (for 127.0.0.1 at 2010-07-17 04:43:38) [GET]
+Rendering template within layouts/sexos
+Rendering sexos/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/sexos/new]
+
+
+Processing SexosController#create (for 127.0.0.1 at 2010-07-17 04:43:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "sexo"=>{"descripcion"=>"Mujer"}}
+  [4;35;1mSexo Create (0.4ms)[0m   [0mINSERT INTO "sexos" ("created_at", "updated_at", "descripcion") VALUES('2010-07-17 02:43:46', '2010-07-17 02:43:46', 'Mujer')[0m
+Redirected to http://localhost:3000/sexos/1
+Completed in 56ms (DB: 0) | 302 Found [http://localhost/sexos]
+
+
+Processing SexosController#show (for 127.0.0.1 at 2010-07-17 04:43:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSexo Load (0.2ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Rendering template within layouts/sexos
+Rendering sexos/show
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/sexos/1]
+
+
+Processing SexosController#index (for 127.0.0.1 at 2010-07-17 04:43:47) [GET]
+  [4;35;1mSexo Load (0.7ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendering template within layouts/sexos
+Rendering sexos/index
+Completed in 92ms (View: 6, DB: 1) | 200 OK [http://localhost/sexos]
+
+
+Processing SexosController#new (for 127.0.0.1 at 2010-07-17 04:43:49) [GET]
+Rendering template within layouts/sexos
+Rendering sexos/new
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/sexos/new]
+
+
+Processing SexosController#create (for 127.0.0.1 at 2010-07-17 04:43:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "sexo"=>{"descripcion"=>"Varón"}}
+  [4;36;1mSexo Create (0.4ms)[0m   [0;1mINSERT INTO "sexos" ("created_at", "updated_at", "descripcion") VALUES('2010-07-17 02:43:58', '2010-07-17 02:43:58', 'Varón')[0m
+Redirected to http://localhost:3000/sexos/2
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/sexos]
+
+
+Processing SexosController#show (for 127.0.0.1 at 2010-07-17 04:43:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSexo Load (0.2ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+Rendering template within layouts/sexos
+Rendering sexos/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/sexos/2]
+
+
+Processing SexosController#index (for 127.0.0.1 at 2010-07-17 04:44:13) [GET]
+  [4;36;1mSexo Load (0.7ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendering template within layouts/sexos
+Rendering sexos/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/sexos]
+
+
+Processing NivelsController#index (for 127.0.0.1 at 2010-07-17 04:44:27) [GET]
+  [4;35;1mNivel Load (0.6ms)[0m   [0mSELECT * FROM "nivels" [0m
+Rendering template within layouts/nivels
+Rendering nivels/index
+Completed in 95ms (View: 11, DB: 1) | 200 OK [http://localhost/nivels]
+
+
+Processing NivelsController#new (for 127.0.0.1 at 2010-07-17 04:44:30) [GET]
+Rendering template within layouts/nivels
+Rendering nivels/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/nivels/new]
+
+
+Processing NivelsController#create (for 127.0.0.1 at 2010-07-17 04:44:43) [POST]
+  Parameters: {"nivel"=>{"descripcion"=>"Primer Nivel"}, "commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k="}
+  [4;36;1mNivel Create (0.4ms)[0m   [0;1mINSERT INTO "nivels" ("created_at", "updated_at", "descripcion") VALUES('2010-07-17 02:44:43', '2010-07-17 02:44:43', 'Primer Nivel')[0m
+Redirected to http://localhost:3000/nivels/1
+Completed in 59ms (DB: 0) | 302 Found [http://localhost/nivels]
+
+
+Processing NivelsController#show (for 127.0.0.1 at 2010-07-17 04:44:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Rendering template within layouts/nivels
+Rendering nivels/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/nivels/1]
+
+
+Processing NivelsController#index (for 127.0.0.1 at 2010-07-17 04:44:44) [GET]
+  [4;36;1mNivel Load (0.7ms)[0m   [0;1mSELECT * FROM "nivels" [0m
+Rendering template within layouts/nivels
+Rendering nivels/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/nivels]
+
+
+Processing NivelsController#new (for 127.0.0.1 at 2010-07-17 04:44:46) [GET]
+Rendering template within layouts/nivels
+Rendering nivels/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/nivels/new]
+
+
+Processing NivelsController#create (for 127.0.0.1 at 2010-07-17 04:44:57) [POST]
+  Parameters: {"nivel"=>{"descripcion"=>"Segundo nivel"}, "commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k="}
+  [4;35;1mNivel Create (0.4ms)[0m   [0mINSERT INTO "nivels" ("created_at", "updated_at", "descripcion") VALUES('2010-07-17 02:44:57', '2010-07-17 02:44:57', 'Segundo nivel')[0m
+Redirected to http://localhost:3000/nivels/2
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/nivels]
+
+
+Processing NivelsController#show (for 127.0.0.1 at 2010-07-17 04:44:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+Rendering template within layouts/nivels
+Rendering nivels/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/nivels/2]
+
+
+Processing MateriasController#index (for 127.0.0.1 at 2010-07-17 04:45:25) [GET]
+  [4;35;1mMateria Load (0.8ms)[0m   [0mSELECT * FROM "materias" [0m
+Rendering template within layouts/materias
+Rendering materias/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/materias]
+
+
+Processing MateriasController#new (for 127.0.0.1 at 2010-07-17 04:45:28) [GET]
+Rendering template within layouts/materias
+Rendering materias/new
+Completed in 97ms (View: 91, DB: 0) | 200 OK [http://localhost/materias/new]
+
+
+Processing MateriasController#create (for 127.0.0.1 at 2010-07-17 04:45:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "materia"=>{"titulo"=>"Office", "descripcion"=>"Word, excel etc"}}
+  [4;36;1mMateria Create (0.7ms)[0m   [0;1mINSERT INTO "materias" ("created_at", "titulo", "updated_at", "descripcion") VALUES('2010-07-17 02:45:52', 'Office', '2010-07-17 02:45:52', 'Word, excel etc')[0m
+Redirected to http://localhost:3000/materias/1
+Completed in 56ms (DB: 1) | 302 Found [http://localhost/materias]
+
+
+Processing MateriasController#show (for 127.0.0.1 at 2010-07-17 04:45:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+Rendering template within layouts/materias
+Rendering materias/show
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/materias/1]
+
+
+Processing MateriasController#index (for 127.0.0.1 at 2010-07-17 04:45:55) [GET]
+  [4;36;1mMateria Load (0.7ms)[0m   [0;1mSELECT * FROM "materias" [0m
+Rendering template within layouts/materias
+Rendering materias/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/materias]
+
+
+Processing MateriasController#new (for 127.0.0.1 at 2010-07-17 04:45:56) [GET]
+Rendering template within layouts/materias
+Rendering materias/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/materias/new]
+
+
+Processing MateriasController#create (for 127.0.0.1 at 2010-07-17 04:46:21) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "materia"=>{"titulo"=>"Desarrollo web", "descripcion"=>"html, uso de herramientas"}}
+  [4;35;1mMateria Create (0.8ms)[0m   [0mINSERT INTO "materias" ("created_at", "titulo", "updated_at", "descripcion") VALUES('2010-07-17 02:46:21', 'Desarrollo web', '2010-07-17 02:46:21', 'html, uso de herramientas')[0m
+Redirected to http://localhost:3000/materias/2
+Completed in 145ms (DB: 1) | 302 Found [http://localhost/materias]
+
+
+Processing MateriasController#show (for 127.0.0.1 at 2010-07-17 04:46:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+Rendering template within layouts/materias
+Rendering materias/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/materias/2]
+
+
+Processing MateriasController#index (for 127.0.0.1 at 2010-07-17 04:46:23) [GET]
+  [4;35;1mMateria Load (0.8ms)[0m   [0mSELECT * FROM "materias" [0m
+Rendering template within layouts/materias
+Rendering materias/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/materias]
+
+
+Processing MateriasController#new (for 127.0.0.1 at 2010-07-17 04:46:25) [GET]
+Rendering template within layouts/materias
+Rendering materias/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/materias/new]
+
+
+Processing MateriasController#create (for 127.0.0.1 at 2010-07-17 04:46:33) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "materia"=>{"titulo"=>"Bases de datos", "descripcion"=>""}}
+  [4;36;1mMateria Create (0.4ms)[0m   [0;1mINSERT INTO "materias" ("created_at", "titulo", "updated_at", "descripcion") VALUES('2010-07-17 02:46:33', 'Bases de datos', '2010-07-17 02:46:33', '')[0m
+Redirected to http://localhost:3000/materias/3
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/materias]
+
+
+Processing MateriasController#show (for 127.0.0.1 at 2010-07-17 04:46:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+Rendering template within layouts/materias
+Rendering materias/show
+Completed in 91ms (View: 84, DB: 0) | 200 OK [http://localhost/materias/3]
+
+
+Processing MateriasController#edit (for 127.0.0.1 at 2010-07-17 04:46:37) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+Rendering template within layouts/materias
+Rendering materias/edit
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/materias/3/edit]
+
+
+Processing MateriasController#update (for 127.0.0.1 at 2010-07-17 04:46:53) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "id"=>"3", "materia"=>{"titulo"=>"Bases de datos", "descripcion"=>"Access"}}
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mMateria Update (0.4ms)[0m   [0;1mUPDATE "materias" SET "updated_at" = '2010-07-17 02:46:53', "descripcion" = 'Access' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/materias/3
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/materias/3]
+
+
+Processing MateriasController#show (for 127.0.0.1 at 2010-07-17 04:46:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+Rendering template within layouts/materias
+Rendering materias/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/materias/3]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-17 04:55:32) [GET]
+  [4;36;1mCurso Load (1.2ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+Rendering template within layouts/cursos
+Rendering cursos/index
+Completed in 126ms (View: 22, DB: 1) | 200 OK [http://localhost/cursos]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-17 04:55:35) [GET]
+Rendering template within layouts/cursos
+Rendering cursos/new
+  [4;35;1mMateria Load (0.4ms)[0m   [0mSELECT * FROM "materias" [0m
+  [4;36;1mNivel Load (0.4ms)[0m   [0;1mSELECT * FROM "nivels" [0m
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" [0m
+Completed in 104ms (View: 95, DB: 1) | 200 OK [http://localhost/cursos/new]
+
+
+Processing CursosController#create (for 127.0.0.1 at 2010-07-17 04:56:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "curso"=>{"fecha_inicio(3i)"=>"17", "fecha_finalizacion(1i)"=>"2010", "materia_id"=>"2", "fecha_finalizacion(2i)"=>"7", "fecha_finalizacion(3i)"=>"17", "horario"=>"Mañanas", "nivel_id"=>"2", "docente_id"=>"", "fecha_inicio(1i)"=>"2010", "fecha_inicio(2i)"=>"7"}}
+  [4;36;1mCurso Create (0.4ms)[0m   [0;1mINSERT INTO "cursos" ("fecha_inicio", "materia_id", "created_at", "fecha_finalizacion", "updated_at", "nivel_id", "horario", "docente_id") VALUES('2010-07-17', 2, '2010-07-17 02:56:10', '2010-07-17', '2010-07-17 02:56:10', 2, 'Mañanas', NULL)[0m
+Redirected to http://localhost:3000/cursos/4
+Completed in 65ms (DB: 0) | 302 Found [http://localhost/cursos]
+
+
+Processing CursosController#show (for 127.0.0.1 at 2010-07-17 04:56:10) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+Rendering template within layouts/cursos
+Rendering cursos/show
+Completed in 97ms (View: 88, DB: 0) | 200 OK [http://localhost/cursos/4]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-17 04:56:47) [GET]
+  [4;36;1mCurso Load (1.0ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+Rendering template within layouts/cursos
+Rendering cursos/index
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/cursos]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-17 04:56:50) [GET]
+Rendering template within layouts/cursos
+Rendering cursos/new
+  [4;35;1mMateria Load (0.4ms)[0m   [0mSELECT * FROM "materias" [0m
+  [4;36;1mNivel Load (0.3ms)[0m   [0;1mSELECT * FROM "nivels" [0m
+  [4;35;1mDocente Load (0.2ms)[0m   [0mSELECT * FROM "docentes" [0m
+Completed in 43ms (View: 34, DB: 1) | 200 OK [http://localhost/cursos/new]
+
+
+Processing DocentesController#index (for 127.0.0.1 at 2010-07-17 04:59:25) [GET]
+  [4;36;1mDocente Load (0.6ms)[0m   [0;1mSELECT * FROM "docentes" [0m
+Rendering template within layouts/docentes
+Rendering docentes/index
+Completed in 97ms (View: 90, DB: 1) | 200 OK [http://localhost/docentes]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-17 04:59:31) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+Completed in 26ms (View: 19, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#create (for 127.0.0.1 at 2010-07-17 04:59:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "docente"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"2010", "fecha_nac(2i)"=>"7", "sexo_id"=>"", "fecha_nac(3i)"=>"17", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"Edgard"}}
+  [4;35;1mDocente Create (0.5ms)[0m   [0mINSERT INTO "docentes" ("nombre2", "cedula", "fecha_nac", "created_at", "updated_at", "lugar_nac", "sexo_id", "apellido1", "apellido2", "nombre1", "email") VALUES('', '', '2010-07-17', '2010-07-17 02:59:43', '2010-07-17 02:59:43', '', NULL, '', '', 'Edgard', '')[0m
+Redirected to http://localhost:3000/docentes/1
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/docentes]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-17 04:59:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/docentes/1]
+
+
+Processing DocentesController#index (for 127.0.0.1 at 2010-07-17 04:59:46) [GET]
+  [4;35;1mDocente Load (0.8ms)[0m   [0mSELECT * FROM "docentes" [0m
+Rendering template within layouts/docentes
+Rendering docentes/index
+Completed in 95ms (View: 8, DB: 1) | 200 OK [http://localhost/docentes]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-17 04:59:49) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#create (for 127.0.0.1 at 2010-07-17 05:00:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "docente"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"2010", "fecha_nac(2i)"=>"7", "sexo_id"=>"", "fecha_nac(3i)"=>"17", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"Augusto"}}
+  [4;36;1mDocente Create (357.8ms)[0m   [0;1mINSERT INTO "docentes" ("nombre2", "cedula", "fecha_nac", "created_at", "updated_at", "lugar_nac", "sexo_id", "apellido1", "apellido2", "nombre1", "email") VALUES('', '', '2010-07-17', '2010-07-17 03:00:00', '2010-07-17 03:00:00', '', NULL, '', '', 'Augusto', '')[0m
+Redirected to http://localhost:3000/docentes/2
+Completed in 373ms (DB: 358) | 302 Found [http://localhost/docentes]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-17 05:00:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/docentes/2]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-17 05:00:14) [GET]
+Rendering template within layouts/cursos
+Rendering cursos/new
+  [4;36;1mMateria Load (0.4ms)[0m   [0;1mSELECT * FROM "materias" [0m
+  [4;35;1mNivel Load (0.4ms)[0m   [0mSELECT * FROM "nivels" [0m
+  [4;36;1mDocente Load (0.5ms)[0m   [0;1mSELECT * FROM "docentes" [0m
+Completed in 121ms (View: 112, DB: 1) | 200 OK [http://localhost/cursos/new]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-17 05:00:44) [GET]
+Rendering template within layouts/cursos
+Rendering cursos/new
+  [4;35;1mMateria Load (0.4ms)[0m   [0mSELECT * FROM "materias" [0m
+  [4;36;1mNivel Load (0.3ms)[0m   [0;1mSELECT * FROM "nivels" [0m
+  [4;35;1mDocente Load (0.5ms)[0m   [0mSELECT * FROM "docentes" [0m
+Completed in 42ms (View: 32, DB: 1) | 200 OK [http://localhost/cursos/new]
+
+
+Processing CursosController#create (for 127.0.0.1 at 2010-07-17 05:01:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "curso"=>{"fecha_inicio(3i)"=>"17", "fecha_finalizacion(1i)"=>"2010", "materia_id"=>"3", "fecha_finalizacion(2i)"=>"7", "fecha_finalizacion(3i)"=>"17", "horario"=>"Mañana", "nivel_id"=>"1", "docente_id"=>"2", "fecha_inicio(1i)"=>"2010", "fecha_inicio(2i)"=>"7"}}
+  [4;36;1mCurso Create (0.5ms)[0m   [0;1mINSERT INTO "cursos" ("fecha_inicio", "materia_id", "created_at", "fecha_finalizacion", "updated_at", "nivel_id", "horario", "docente_id") VALUES('2010-07-17', 3, '2010-07-17 03:01:29', '2010-07-17', '2010-07-17 03:01:29', 1, 'Mañana', 2)[0m
+Redirected to http://localhost:3000/cursos/5
+Completed in 586ms (DB: 0) | 302 Found [http://localhost/cursos]
+
+
+Processing CursosController#show (for 127.0.0.1 at 2010-07-17 05:01:29) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+Rendering template within layouts/cursos
+Rendering cursos/show
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/cursos/5]
+
+
+Processing CreditosController#index (for 127.0.0.1 at 2010-07-17 05:09:09) [GET]
+  [4;36;1mCredito Load (0.8ms)[0m   [0;1mSELECT * FROM "creditos" [0m
+Rendering template within layouts/creditos
+Rendering creditos/index
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/creditos]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-17 05:09:11) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+  [4;35;1mEstudiante Load (0.5ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+
+ActionView::TemplateError (undefined method `nombre' for #<Estudiante:0x1033112b8>) on line #9 of app/views/creditos/new.html.erb:
+6:   <p>
+7:     <%=
+8: 	    @estudiantes = Estudiante.find(:all)
+9: 	    f.collection_select(:estudiante_id, @estudiantes, :id, :nombre )
+10: 	%>
+11:   </p>
+12:   <p>
+
+    app/views/creditos/new.html.erb:9
+    app/views/creditos/new.html.erb:3
+    app/controllers/creditos_controller.rb:29:in `new'
+
+Rendered rescues/_trace (133.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-17 05:09:48) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+  [4;36;1mEstudiante Load (0.5ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+  [4;35;1mCurso Load (0.7ms)[0m   [0mSELECT * FROM "cursos" [0m
+
+ActionView::TemplateError (undefined method `descripcion' for #<Curso:0x1031da318>) on line #15 of app/views/creditos/new.html.erb:
+12:   <p>
+13: 	<%=
+14: 	    @cursos = Curso.find(:all)
+15: 	    f.collection_select(:curso_id, @cursos, :id, :descripcion )
+16: 	%>
+17:     <%= f.label :curso_id %><br />
+18:     <%= f.text_field :curso_id %>
+
+    app/views/creditos/new.html.erb:15
+    app/views/creditos/new.html.erb:3
+    app/controllers/creditos_controller.rb:29:in `new'
+
+Rendered rescues/_trace (51.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-17 05:10:12) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+  [4;36;1mEstudiante Load (0.5ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+  [4;35;1mCurso Load (0.7ms)[0m   [0mSELECT * FROM "cursos" [0m
+
+ActionView::TemplateError (undefined method `titulo' for #<Curso:0x1030d0e90>) on line #15 of app/views/creditos/new.html.erb:
+12:   <p>
+13: 	<%=
+14: 	    @cursos = Curso.find(:all)
+15: 	    f.collection_select(:curso_id, @cursos, :id, :titulo )
+16: 	%>
+17:     <%= f.label :curso_id %><br />
+18:     <%= f.text_field :curso_id %>
+
+    app/views/creditos/new.html.erb:15
+    app/views/creditos/new.html.erb:3
+    app/controllers/creditos_controller.rb:29:in `new'
+
+Rendered rescues/_trace (50.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-17 05:11:59) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+  [4;36;1mEstudiante Load (0.5ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+  [4;35;1mCurso Load (0.7ms)[0m   [0mSELECT * FROM "cursos" [0m
+
+ActionView::TemplateError (undefined method `titulo' for #<Curso:0x1036d6dd0>) on line #15 of app/views/creditos/new.html.erb:
+12:   <p>
+13: 	<%=
+14: 	    @cursos = Curso.find(:all)
+15: 	    f.collection_select(:curso_id, @cursos, :id, :titulo )
+16: 	%>
+17:     <%= f.label :curso_id %><br />
+18:     <%= f.text_field :curso_id %>
+
+    app/views/creditos/new.html.erb:15
+    app/views/creditos/new.html.erb:3
+    app/controllers/creditos_controller.rb:29:in `new'
+
+Rendered rescues/_trace (50.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-17 05:12:10) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+  [4;36;1mEstudiante Load (0.5ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+  [4;35;1mCurso Load (0.8ms)[0m   [0mSELECT * FROM "cursos" [0m
+
+ActionView::TemplateError (undefined method `titulo' for #<Curso:0x1036d1bc8>) on line #15 of app/views/creditos/new.html.erb:
+12:   <p>
+13: 	<%=
+14: 	    @cursos = Curso.find(:all)
+15: 	    f.collection_select(:curso_id, @cursos, :id, :titulo )
+16: 	%>
+17:     <%= f.label :curso_id %><br />
+18:     <%= f.text_field :curso_id %>
+
+    app/views/creditos/new.html.erb:15
+    app/views/creditos/new.html.erb:3
+    app/controllers/creditos_controller.rb:29:in `new'
+
+Rendered rescues/_trace (50.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-17 05:14:26) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+  [4;36;1mEstudiante Load (0.7ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+  [4;35;1mCurso Load (0.7ms)[0m   [0mSELECT * FROM "cursos" [0m
+Completed in 123ms (View: 115, DB: 1) | 200 OK [http://localhost/creditos/new]
+
+
+Processing CreditosController#create (for 127.0.0.1 at 2010-07-17 05:14:35) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "credito"=>{"curso_id"=>"", "estudiante_id"=>"1"}}
+  [4;36;1mCredito Create (0.4ms)[0m   [0;1mINSERT INTO "creditos" ("created_at", "updated_at", "estudiante_id", "curso_id") VALUES('2010-07-17 03:14:35', '2010-07-17 03:14:35', 1, NULL)[0m
+Redirected to http://localhost:3000/creditos/4
+Completed in 67ms (DB: 0) | 302 Found [http://localhost/creditos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-17 05:14:35) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 4) [0m
+Rendering template within layouts/creditos
+Rendering creditos/show
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/creditos/4]
+
+
+Processing CreditosController#index (for 127.0.0.1 at 2010-07-17 05:14:55) [GET]
+  [4;36;1mCredito Load (0.8ms)[0m   [0;1mSELECT * FROM "creditos" [0m
+Rendering template within layouts/creditos
+Rendering creditos/index
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/creditos]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-17 05:14:56) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+  [4;35;1mEstudiante Load (0.5ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+  [4;36;1mCurso Load (0.7ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+Completed in 35ms (View: 26, DB: 1) | 200 OK [http://localhost/creditos/new]
+
+
+Processing CreditosController#create (for 127.0.0.1 at 2010-07-17 05:15:04) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"74Lh8M5SIkpXNT3KpqL3vV0BfyhpZStEsD3l7PTMB5k=", "credito"=>{"curso_id"=>"4", "estudiante_id"=>"2"}}
+  [4;35;1mCredito Create (0.4ms)[0m   [0mINSERT INTO "creditos" ("created_at", "updated_at", "estudiante_id", "curso_id") VALUES('2010-07-17 03:15:04', '2010-07-17 03:15:04', 2, 4)[0m
+Redirected to http://localhost:3000/creditos/5
+Completed in 60ms (DB: 0) | 302 Found [http://localhost/creditos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-17 05:15:04) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 5) [0m
+Rendering template within layouts/creditos
+Rendering creditos/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/creditos/5]
+
+
+Processing CreditosController#index (for 127.0.0.1 at 2010-07-17 05:15:12) [GET]
+  [4;35;1mCredito Load (0.9ms)[0m   [0mSELECT * FROM "creditos" [0m
+Rendering template within layouts/creditos
+Rendering creditos/index
+Completed in 103ms (View: 16, DB: 1) | 200 OK [http://localhost/creditos]
+
+
+Processing NivelsController#index (for 127.0.0.1 at 2010-07-17 05:50:41) [GET]
+  [4;36;1mNivel Load (0.8ms)[0m   [0;1mSELECT * FROM "nivels" [0m
+Rendering template within layouts/nivels
+Rendering nivels/index
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/nivels]

@@ -1,0 +1,13 @@
+<p>
+  <b>Estudiante:</b>
+  <%=h @credito.estudiante_id %>
+</p>
+
+<p>
+  <b>Curso:</b>
+  <%=h @credito.curso_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_credito_path(@credito) %> |
+<%= link_to 'Back', creditos_path %>

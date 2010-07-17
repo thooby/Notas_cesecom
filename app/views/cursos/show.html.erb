@@ -1,0 +1,33 @@
+<p>
+  <b>Materia:</b>
+  <%=h @curso.materia_id %>
+</p>
+
+<p>
+  <b>Fecha inicio:</b>
+  <%=h @curso.fecha_inicio %>
+</p>
+
+<p>
+  <b>Fecha finalizacion:</b>
+  <%=h @curso.fecha_finalizacion %>
+</p>
+
+<p>
+  <b>Nivel:</b>
+  <%=h @curso.nivel_id %>
+</p>
+
+<p>
+  <b>Horario:</b>
+  <%=h @curso.horario %>
+</p>
+
+<p>
+  <b>Docente:</b>
+  <%=h @curso.docente_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_curso_path(@curso) %> |
+<%= link_to 'Back', cursos_path %>

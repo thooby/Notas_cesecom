@@ -1,0 +1,48 @@
+<p>
+  <b>Nombre1:</b>
+  <%=h @estudiante.nombre1 %>
+</p>
+
+<p>
+  <b>Nombre2:</b>
+  <%=h @estudiante.nombre2 %>
+</p>
+
+<p>
+  <b>Apellido1:</b>
+  <%=h @estudiante.apellido1 %>
+</p>
+
+<p>
+  <b>Apellido2:</b>
+  <%=h @estudiante.apellido2 %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @estudiante.email %>
+</p>
+
+<p>
+  <b>Sexo:</b>
+  <%=h @estudiante.sexo_id %>
+</p>
+
+<p>
+  <b>Cedula:</b>
+  <%=h @estudiante.cedula %>
+</p>
+
+<p>
+  <b>Fecha nac:</b>
+  <%=h @estudiante.fecha_nac %>
+</p>
+
+<p>
+  <b>Lugar nac:</b>
+  <%=h @estudiante.lugar_nac %>
+</p>
+
+
+<%= link_to 'Edit', edit_estudiante_path(@estudiante) %> |
+<%= link_to 'Back', estudiantes_path %>

@@ -1,0 +1,11 @@
+script/generate scaffold  estudiante nombre1:string nombre2:string apellido1:string apellido2:string email:string sexo_id:integer cedula:string fecha_nac:date lugar_nac:string
+script/generate scaffold  docente nombre1:string nombre2:string apellido1:string apellido2:string email:string sexo_id:integer cedula:string fecha_nac:date lugar_nac:string
+script/generate scaffold  creditos estudiante_id:integer curso_id:integer
+script/generate scaffold  notas credito_id:integer tipo_nota_id:integer fecha_nota:date calificacion:integer
+script/generate scaffold  tipo_notas descripcion:string
+script/generate scaffold  curso materia_id:integer fecha_inicio:date fecha_finalizacion:date nivel_id:integer horario:string docente_id:integer 
+script/generate scaffold  materia titulo:string descripcion:string 
+script/generate scaffold  nivel descripcion:string 
+script/generate scaffold  sexo descripcion:string
+rake db:migrate
+

@@ -1,0 +1,20 @@
+<h1>Listing tipo_notas</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+  </tr>
+
+<% @tipo_notas.each do |tipo_nota| %>
+  <tr>
+    <td><%=h tipo_nota.descripcion %></td>
+    <td><%= link_to 'Show', tipo_nota %></td>
+    <td><%= link_to 'Edit', edit_tipo_nota_path(tipo_nota) %></td>
+    <td><%= link_to 'Destroy', tipo_nota, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tipo_nota', new_tipo_nota_path %>

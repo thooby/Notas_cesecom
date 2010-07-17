@@ -1,0 +1,16 @@
+<h1>Editing tipo_nota</h1>
+
+<% form_for(@tipo_nota) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tipo_nota %> |
+<%= link_to 'Back', tipo_notas_path %>

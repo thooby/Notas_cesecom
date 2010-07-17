@@ -1,0 +1,13 @@
+<p>
+  <b>Titulo:</b>
+  <%=h @materia.titulo %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%=h @materia.descripcion %>
+</p>
+
+
+<%= link_to 'Edit', edit_materia_path(@materia) %> |
+<%= link_to 'Back', materias_path %>

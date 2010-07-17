@@ -1,0 +1,48 @@
+<h1>Editing estudiante</h1>
+
+<% form_for(@estudiante) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre1 %><br />
+    <%= f.text_field :nombre1 %>
+  </p>
+  <p>
+    <%= f.label :nombre2 %><br />
+    <%= f.text_field :nombre2 %>
+  </p>
+  <p>
+    <%= f.label :apellido1 %><br />
+    <%= f.text_field :apellido1 %>
+  </p>
+  <p>
+    <%= f.label :apellido2 %><br />
+    <%= f.text_field :apellido2 %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :sexo_id %><br />
+    <%= f.text_field :sexo_id %>
+  </p>
+  <p>
+    <%= f.label :cedula %><br />
+    <%= f.text_field :cedula %>
+  </p>
+  <p>
+    <%= f.label :fecha_nac %><br />
+    <%= f.date_select :fecha_nac %>
+  </p>
+  <p>
+    <%= f.label :lugar_nac %><br />
+    <%= f.text_field :lugar_nac %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @estudiante %> |
+<%= link_to 'Back', estudiantes_path %>

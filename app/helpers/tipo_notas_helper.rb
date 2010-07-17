@@ -1,0 +1,2 @@
+module TipoNotasHelper
+end
