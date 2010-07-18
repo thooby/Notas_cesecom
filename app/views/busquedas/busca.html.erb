@@ -1,0 +1,4 @@
+<% form_tag({:controller => 'busquedas', :action => 'index'}, :method => 'get') do %>
+<%= text_field_tag "q", params[:q] %>
+<%= submit_tag "Busca!" %>
+<% end %>

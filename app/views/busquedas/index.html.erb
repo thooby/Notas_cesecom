@@ -1,0 +1,7 @@
+<% @estudiantes.each do |s| %>
+  <p>
+     <%= link_to nombre_entero(s), estudiante_path(s.id) %>
+     <%= saca_notas(s) %>
+  </p>
+   
+<% end %>

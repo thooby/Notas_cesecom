@@ -16,6 +16,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :docentes
 
   map.resources :estudiantes
+  #map.resources :busquedas
 
   # The priority is based upon order of creation: first created -> highest priority.
 
