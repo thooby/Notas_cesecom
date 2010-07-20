@@ -6,7 +6,7 @@
   <p>
 	<%=
 	    @materias = Materia.find(:all)
-	    f.collection_select(:materia_id, @materias, :id, :titulo )
+	    f.collection_select(:materia_id, @materias, :id, : )
 	%>
 	
    
@@ -33,7 +33,7 @@
   <p>
 	<%=
 	    @docentes = Docente.find(:all)
-	    f.collection_select(:docente_id, @docentes, :id, :materia_id )
+	    f.collection_select(:docente_id, @docentes, :id, :nombre1 )
 	%>
   </p>
   <p>

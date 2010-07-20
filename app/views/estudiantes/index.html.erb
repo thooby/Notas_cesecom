@@ -1,36 +1,32 @@
-<h1>Listing estudiantes</h1>
-
+<h1>Lista de estudiantes</h1>
+<% form_tag({:controller => 'busquedas', :action => 'index'}, :method => 'get') do %>
+<%= text_field_tag "q", params[:q] %>
+<%= submit_tag "Busca!" %>
+<% end %>
 <table>
   <tr>
-    <th>Nombre1</th>
-    <th>Nombre2</th>
-    <th>Apellido1</th>
-    <th>Apellido2</th>
+    <th>Nombre</th>
     <th>Email</th>
     <th>Sexo</th>
-    <th>Cedula</th>
-    <th>Fecha nac</th>
-    <th>Lugar nac</th>
+    <th>Cédula</th>
   </tr>
 
 <% @estudiantes.each do |estudiante| %>
   <tr>
-    <td><%=h estudiante.nombre1 %></td>
-    <td><%=h estudiante.nombre2 %></td>
-    <td><%=h estudiante.apellido1 %></td>
-    <td><%=h estudiante.apellido2 %></td>
+    <td><%=h estudiante.nombre1 %>
+    <%=h estudiante.nombre2 %>
+    <%=h estudiante.apellido1 %>
+    <%=h estudiante.apellido2 %></td>
     <td><%=h estudiante.email %></td>
-    <td><%=h estudiante.sexo_id %></td>
+    <td><%=h estudiante.sexo.descripcion %></td>
     <td><%=h estudiante.cedula %></td>
-    <td><%=h estudiante.fecha_nac %></td>
-    <td><%=h estudiante.lugar_nac %></td>
     <td><%= link_to 'Show', estudiante %></td>
-    <td><%= link_to 'Edit', edit_estudiante_path(estudiante) %></td>
-    <td><%= link_to 'Destroy', estudiante, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Editar', edit_estudiante_path(estudiante) %></td>
+    <td><%= link_to 'Eliminar', estudiante, :confirm => '¿Está usted seguro/a?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New estudiante', new_estudiante_path %>
+<%= link_to 'Añadir estudiante', new_estudiante_path %>
