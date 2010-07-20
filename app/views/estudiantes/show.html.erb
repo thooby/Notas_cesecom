@@ -1,48 +1,31 @@
 <p>
-  <b>Nombre1:</b>
+  <b>Nombres:</b>
   <%=h @estudiante.nombre1 %>
-</p>
-
-<p>
-  <b>Nombre2:</b>
   <%=h @estudiante.nombre2 %>
-</p>
-
-<p>
-  <b>Apellido1:</b>
+<br />
+  <b>Apellidos:</b>
   <%=h @estudiante.apellido1 %>
-</p>
-
-<p>
-  <b>Apellido2:</b>
   <%=h @estudiante.apellido2 %>
 </p>
 
+
+
 <p>
-  <b>Email:</b>
+ <b>Sexo:</b>
+  <%=h @estudiante.sexo.descripcion %>
+  <b>Cedula:</b>
+  <%=h @estudiante.cedula %>
+<br />
+  <b>Fecha de nacimiento:</b>
+  <%=h @estudiante.fecha_nac %>
+<br />
+  <b>Lugar de nacimiento:</b>
+  <%=h @estudiante.lugar_nac %>
+</p>
+<p>
+  <b>e-mail:</b>
   <%=h @estudiante.email %>
 </p>
 
-<p>
-  <b>Sexo:</b>
-  <%=h @estudiante.sexo_id %>
-</p>
-
-<p>
-  <b>Cedula:</b>
-  <%=h @estudiante.cedula %>
-</p>
-
-<p>
-  <b>Fecha nac:</b>
-  <%=h @estudiante.fecha_nac %>
-</p>
-
-<p>
-  <b>Lugar nac:</b>
-  <%=h @estudiante.lugar_nac %>
-</p>
-
-
-<%= link_to 'Edit', edit_estudiante_path(@estudiante) %> |
-<%= link_to 'Back', estudiantes_path %>
+<%= link_to 'Editar', edit_estudiante_path(@estudiante) %> |
+<%= link_to 'Hacia atrás', estudiantes_path %>

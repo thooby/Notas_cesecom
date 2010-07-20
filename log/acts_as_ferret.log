@@ -5426,3 +5426,4 @@ ar_options: {}
 [estudiante] 2 results from AR: [#<Estudiante id: 5, nombre1: "Heriberto", nombre2: "José", apellido1: "Jimenez", apellido2: "Krauss", email: "kraus@gmail.com", sexo_id: 1, cedula: "H678-223576", fecha_nac: "2010-07-20", lugar_nac: "Managua", created_at: "2010-07-20 03:24:54", updated_at: "2010-07-20 03:24:54">, #<Estudiante id: 6, nombre1: "Heribérto", nombre2: "Manuel", apellido1: "Rodriguez", apellido2: "Vaz", email: "vaz@gmail.com", sexo_id: 1, cedula: "M56-637", fecha_nac: "2010-07-20", lugar_nac: "Managua", created_at: "2010-07-20 03:25:54", updated_at: "2010-07-20 03:25:54">]
 Query: Heriberto~
 total hits: 2, results delivered: 2
+Will use remote index server which should be available at druby://localhost:9010

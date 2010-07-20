@@ -1,16 +1,4 @@
 <h1>Añadir estudiante</h1>
-<% error_handling_form_for(@estudiante) do |f| -%> 
-    <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
-    <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
-    <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
-    <%= f.text_field :apellido2,:label => 'Segundo apellido' %>
-    <%= f.text_field :email, :label => 'e-mail' %>
-    <%= @sexos = Sexo.find(:all)
-	    f.collection_select(:sexo_id, @sexos, :id, :descripcion ) %>
-    <%= f.text_field :cedula, :label => 'Cédula' %>
-    <%= f.date_select :fecha_nac, :label => 'Fecha de nacimiento' %> 
-    <%= f.text_field :lugar_nac, :label => 'Lugar de nacimiento'%> 
-    <%= f.submit 'Crear' %>
-<% end %>
+<%= render(:partial => "form") %>
 
 <%= link_to 'Hacia atrás', estudiantes_path %>

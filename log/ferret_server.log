@@ -1162,3 +1162,102 @@ index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
 #method_missing(:find_ids, [:estudiante, "Heriberto~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+#method_missing(:add, [:estudiante, {:apellido2=>"Arauz", :nombre1=>"Josefa", :class_name=>"Estudiante", :nombre2=>"Luisa", :key=>"Estudiante-4", :id=>"4", :apellido1=>"Martinez"}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+#method_missing(:add, [:estudiante, {:apellido2=>"Fernandez", :nombre1=>"Pedro", :class_name=>"Estudiante", :nombre2=>"Juan", :key=>"Estudiante-1", :id=>"1", :apellido1=>"Landero"}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+#method_missing(:add, [:estudiante, {:apellido2=>"Arauz", :nombre1=>"Josefa", :class_name=>"Estudiante", :nombre2=>"Luisa", :key=>"Estudiante-4", :id=>"4", :apellido1=>"Martinez"}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+#method_missing(:add, [:estudiante, {:apellido2=>"Arauz", :nombre1=>"Maria", :class_name=>"Estudiante", :nombre2=>"José", :key=>"Estudiante-2", :id=>"2", :apellido1=>"Rodriguez"}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+#method_missing(:add, [:estudiante, {:apellido2=>"López", :nombre1=>"Matilde", :class_name=>"Estudiante", :nombre2=>"Lisbeth", :key=>"Estudiante-3", :id=>"3", :apellido1=>"Castro"}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1032953c0>
