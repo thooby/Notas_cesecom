@@ -6769,3 +6769,459 @@ Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-20 04:27:11) [GE
 Rendering template within layouts/estudiantes
 Rendering estudiantes/show
 Completed in 96ms (View: 83, DB: 0) | 200 OK [http://localhost/estudiantes/4]
+DEPRECATION WARNING: ActiveRecord::Base.allow_concurrency= has been deprecated and no longer has any effect. Please remove all references to allow_concurrency=. (called from allow_concurrency= at /Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_specification.rb:98)
+DEPRECATION WARNING: ActiveRecord::Base.verification_timeout= has been deprecated and no longer has any effect. Please remove all references to verification_timeout=. (called from verification_timeout= at /Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_specification.rb:108)
+DEPRECATION WARNING: ActiveRecord::Base.allow_concurrency= has been deprecated and no longer has any effect. Please remove all references to allow_concurrency=. (called from allow_concurrency= at /Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_specification.rb:98)
+DEPRECATION WARNING: ActiveRecord::Base.verification_timeout= has been deprecated and no longer has any effect. Please remove all references to verification_timeout=. (called from verification_timeout= at /Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_specification.rb:108)
+DEPRECATION WARNING: ActiveRecord::Base.allow_concurrency= has been deprecated and no longer has any effect. Please remove all references to allow_concurrency=. (called from allow_concurrency= at /Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_specification.rb:98)
+DEPRECATION WARNING: ActiveRecord::Base.verification_timeout= has been deprecated and no longer has any effect. Please remove all references to verification_timeout=. (called from verification_timeout= at /Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_specification.rb:108)
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-20 05:14:04) [GET]
+  [4;36;1mEstudiante Load (1.2ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 329ms (View: 103, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:14:19) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"jose~0.2"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 81ms (View: 6, DB: 1) | 200 OK [http://localhost/busquedas?q=jose%7E0.2&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:14:29) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"jose~"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/busquedas?q=jose%7E&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:14:46) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"josé~"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/busquedas?q=jos%C3%A9%7E&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:14:51) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"josé~"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/busquedas?q=jos%C3%A9%7E&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:15:09) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"lopez~"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 91ms (View: 1, DB: 1) | 200 OK [http://localhost/busquedas?q=lopez%7E&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:15:29) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"lópez~"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/busquedas?q=l%C3%B3pez%7E&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:15:35) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"lópez"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/busquedas?q=l%C3%B3pez&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:15:45) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"landero"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 17ms (View: 1, DB: 1) | 200 OK [http://localhost/busquedas?q=landero&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:21:26) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"landero"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mEstudiante Load (0.4ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('1')) [0m
+Rendering busquedas/index
+  [4;35;1mNota Load (0.7ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 1)) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.4ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+Completed in 62ms (View: 41, DB: 5) | 200 OK [http://localhost/busquedas?q=landero&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:21:36) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"lopez~"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('3')) [0m
+Rendering busquedas/index
+  [4;36;1mNota Load (0.3ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 3)) [0m
+Completed in 106ms (View: 88, DB: 2) | 200 OK [http://localhost/busquedas?q=lopez%7E&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:21:51) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"jose"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/busquedas?q=jose&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:22:00) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"jose~"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 17ms (View: 1, DB: 1) | 200 OK [http://localhost/busquedas?q=jose%7E&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:22:07) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"jose~0.2"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mEstudiante Load (0.6ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('1','2','4')) [0m
+Rendering busquedas/index
+  [4;35;1mNota Load (0.4ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 4)) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 6) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNota Load (0.4ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 2)) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.2ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mNota Load (0.6ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 1)) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+Completed in 151ms (View: 126, DB: 7) | 200 OK [http://localhost/busquedas?q=jose%7E0.2&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:22:28) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"jose~0.3"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mEstudiante Load (0.5ms)[0m   [0mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('2','4')) [0m
+Rendering busquedas/index
+  [4;36;1mNota Load (0.5ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 2)) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 3) [0m
+  [4;36;1mTipoNota Load (0.3ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mNota Load (0.3ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 4)) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+Completed in 135ms (View: 114, DB: 4) | 200 OK [http://localhost/busquedas?q=jose%7E0.3&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:22:39) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"jose~0.5"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering busquedas/index
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/busquedas?q=jose%7E0.5&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:22:53) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"josé~0.5"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mEstudiante Load (0.4ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('2')) [0m
+Rendering busquedas/index
+  [4;35;1mNota Load (0.5ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 2)) [0m
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 3) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+Completed in 133ms (View: 113, DB: 4) | 200 OK [http://localhost/busquedas?q=jos%C3%A9%7E0.5&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:23:05) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"josé~0.4"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('2')) [0m
+Rendering busquedas/index
+  [4;36;1mNota Load (0.5ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 2)) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 3) [0m
+  [4;36;1mTipoNota Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+Completed in 53ms (View: 32, DB: 4) | 200 OK [http://localhost/busquedas?q=jos%C3%A9%7E0.4&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:23:12) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"josé~0.3"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mEstudiante Load (0.5ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('2','4')) [0m
+Rendering busquedas/index
+  [4;35;1mNota Load (0.5ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 2)) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 3) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mNota Load (0.3ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 4)) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.2ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+Completed in 57ms (View: 36, DB: 4) | 200 OK [http://localhost/busquedas?q=jos%C3%A9%7E0.3&commit=Busca%21]
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 05:23:36) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+Rendered forms/_field (0.6ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Completed in 206ms (View: 193, DB: 0) | 200 OK [http://localhost/estudiantes/new]
+
+
+Processing EstudiantesController#create (for 127.0.0.1 at 2010-07-20 05:24:54) [POST]
+  Parameters: {"estudiante"=>{"nombre2"=>"José", "cedula"=>"H678-223576", "lugar_nac"=>"Managua", "fecha_nac(1i)"=>"2010", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"Jimenez", "apellido2"=>"Krauss", "email"=>"kraus@gmail.com", "nombre1"=>"Heriberto"}, "commit"=>"Crear", "authenticity_token"=>"7y6JEWVRiaDj4W77OQRCHcoJp6N6njjDM/ZlM81f6No="}
+  [4;36;1mEstudiante Create (0.9ms)[0m   [0;1mINSERT INTO "estudiantes" ("nombre2", "cedula", "fecha_nac", "created_at", "updated_at", "lugar_nac", "sexo_id", "apellido1", "apellido2", "nombre1", "email") VALUES('José', 'H678-223576', '2010-07-20', '2010-07-20 03:24:54', '2010-07-20 03:24:54', 'Managua', 1, 'Jimenez', 'Krauss', 'Heriberto', 'kraus@gmail.com')[0m
+ferret_create/update: Estudiante-5
+creating doc for class: Estudiante-5
+Adding field nombre1 with value 'Heriberto' to index
+Adding field nombre2 with value 'José' to index
+Adding field apellido1 with value 'Jimenez' to index
+Adding field apellido2 with value 'Krauss' to index
+Redirected to http://localhost:3000/estudiantes/5
+Completed in 368ms (DB: 1) | 302 Found [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-20 05:24:54) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 5) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+Completed in 100ms (View: 9, DB: 0) | 200 OK [http://localhost/estudiantes/5]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-20 05:24:57) [GET]
+  [4;36;1mEstudiante Load (1.2ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.2ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 39ms (View: 25, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 05:24:59) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Completed in 115ms (View: 102, DB: 0) | 200 OK [http://localhost/estudiantes/new]
+
+
+Processing EstudiantesController#create (for 127.0.0.1 at 2010-07-20 05:25:54) [POST]
+  Parameters: {"estudiante"=>{"nombre2"=>"Manuel", "cedula"=>"M56-637", "lugar_nac"=>"Managua", "fecha_nac(1i)"=>"2010", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"Rodriguez", "apellido2"=>"Vaz", "email"=>"vaz@gmail.com", "nombre1"=>"Heribérto"}, "commit"=>"Crear", "authenticity_token"=>"7y6JEWVRiaDj4W77OQRCHcoJp6N6njjDM/ZlM81f6No="}
+  [4;35;1mEstudiante Create (0.4ms)[0m   [0mINSERT INTO "estudiantes" ("nombre2", "cedula", "fecha_nac", "created_at", "updated_at", "lugar_nac", "sexo_id", "apellido1", "apellido2", "nombre1", "email") VALUES('Manuel', 'M56-637', '2010-07-20', '2010-07-20 03:25:54', '2010-07-20 03:25:54', 'Managua', 1, 'Rodriguez', 'Vaz', 'Heribérto', 'vaz@gmail.com')[0m
+ferret_create/update: Estudiante-6
+creating doc for class: Estudiante-6
+Adding field nombre1 with value 'Heribérto' to index
+Adding field nombre2 with value 'Manuel' to index
+Adding field apellido1 with value 'Rodriguez' to index
+Adding field apellido2 with value 'Vaz' to index
+Redirected to http://localhost:3000/estudiantes/6
+Completed in 566ms (DB: 0) | 302 Found [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-20 05:25:54) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mEstudiante Load (0.3ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 6) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+Completed in 19ms (View: 4, DB: 0) | 200 OK [http://localhost/estudiantes/6]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-20 05:26:00) [GET]
+  [4;35;1mEstudiante Load (1.3ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 124ms (View: 111, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:26:10) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"Heriberto"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('5')) [0m
+Rendering busquedas/index
+  [4;36;1mNota Load (0.3ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 5)) [0m
+Completed in 34ms (View: 14, DB: 2) | 200 OK [http://localhost/busquedas?q=Heriberto&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:26:19) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"Heribérto"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mEstudiante Load (0.4ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('6')) [0m
+Rendering busquedas/index
+  [4;35;1mNota Load (0.3ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 6)) [0m
+Completed in 105ms (View: 87, DB: 2) | 200 OK [http://localhost/busquedas?q=Herib%C3%A9rto&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:26:31) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"Heribérto~"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mEstudiante Load (0.5ms)[0m   [0mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('6','5')) [0m
+Rendering busquedas/index
+  [4;36;1mNota Load (0.3ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 6)) [0m
+  [4;35;1mNota Load (0.2ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 5)) [0m
+Completed in 32ms (View: 12, DB: 2) | 200 OK [http://localhost/busquedas?q=Herib%C3%A9rto%7E&commit=Busca%21]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-20 05:26:40) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"Heriberto~"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mEstudiante Load (0.5ms)[0m   [0mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('6','5')) [0m
+Rendering busquedas/index
+  [4;36;1mNota Load (0.3ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 5)) [0m
+  [4;35;1mNota Load (0.2ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 6)) [0m
+Completed in 31ms (View: 12, DB: 2) | 200 OK [http://localhost/busquedas?q=Heriberto%7E&commit=Busca%21]

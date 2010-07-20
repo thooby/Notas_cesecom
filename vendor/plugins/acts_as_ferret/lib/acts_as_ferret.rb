@@ -47,7 +47,7 @@ require 'remote_index'
 require 'ferret_server'
 
 require 'rdig_adapter'
-
+Ferret.locale = "en_US.UTF-8"
 # The Rails ActiveRecord Ferret Mixin.
 #
 # This mixin adds full text search capabilities to any Rails model.

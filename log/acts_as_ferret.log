@@ -5193,3 +5193,236 @@ ar_options: {}
 [estudiante] 2 results from AR: [#<Estudiante id: 2, nombre1: "Maria", nombre2: "José", apellido1: "Rodriguez", apellido2: "Arauz", email: "mariaj@gmail.com", sexo_id: 1, cedula: "M34-4565-23", fecha_nac: "2010-07-17", lugar_nac: "Ocotal", created_at: "2010-07-17 02:07:46", updated_at: "2010-07-20 02:16:13">, #<Estudiante id: 4, nombre1: "Josefa", nombre2: "Luisa", apellido1: "Martinez", apellido2: "Arauz", email: "Jf.martinez@gmail.com", sexo_id: 1, cedula: "A654-986", fecha_nac: "2010-07-17", lugar_nac: "Ocotal", created_at: "2010-07-17 20:39:13", updated_at: "2010-07-20 02:18:21">]
 Query: araz~
 total hits: 2, results delivered: 2
+Will use local index.
+Will use local index.
+Will use local index.
+Will use remote index server which should be available at druby://localhost:9010
+using index in /Users/zubi/notas_cesecom/index/development/estudiante
+[estudiante] rebuild index with models: []
+[estudiante] reopening index at /Users/zubi/notas_cesecom/index/development/estudiante
+[estudiante] register class Estudiante with index estudiante
+[estudiante] default field list for index estudiante: [:apellido2, :nombre1, :nombre2, :apellido1]
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: jose~0.2
+-->+(apellido2:jose~0.2 nombre1:jose~0.2 nombre2:jose~0.2 apellido1:jose~0.2) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: jose~0.2
+total hits: 0, results delivered: 0
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: jose~
+-->+(apellido2:jose~ nombre1:jose~ nombre2:jose~ apellido1:jose~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: jose~
+total hits: 0, results delivered: 0
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: josé~
+-->+(apellido2:josé~ nombre1:josé~ nombre2:josé~ apellido1:josé~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: josé~
+total hits: 0, results delivered: 0
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: josé~
+-->+(apellido2:josé~ nombre1:josé~ nombre2:josé~ apellido1:josé~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: josé~
+total hits: 0, results delivered: 0
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: lopez~
+-->+(apellido2:lopez~ nombre1:lopez~ nombre2:lopez~ apellido1:lopez~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: lopez~
+total hits: 0, results delivered: 0
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: lópez~
+-->+(apellido2:lópez~ nombre1:lópez~ nombre2:lópez~ apellido1:lópez~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: lópez~
+total hits: 0, results delivered: 0
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: lópez
+-->+(apellido2:lópez nombre1:lópez nombre2:lópez apellido1:lópez) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: lópez
+total hits: 0, results delivered: 0
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: landero
+-->+(apellido2:landero nombre1:landero nombre2:landero apellido1:landero) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: landero
+total hits: 0, results delivered: 0
+Will use remote index server which should be available at druby://localhost:9010
+[estudiante] [estudiante] changing index dir to /Users/zubi/notas_cesecom/index/development/estudiante/20100720032040
+[estudiante] reopening index at /Users/zubi/notas_cesecom/index/development/estudiante/20100720032040
+[estudiante] [estudiante] index dir is now /Users/zubi/notas_cesecom/index/development/estudiante/20100720032040
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: landero
+-->+(apellido2:landero nombre1:landero nombre2:landero apellido1:landero) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 1 results from AR: [#<Estudiante id: 1, nombre1: "Pedro", nombre2: "Juan", apellido1: "Landero", apellido2: "Fernandez", email: "pedro.landero@gmail.com", sexo_id: 2, cedula: "M36-4567-23", fecha_nac: "2010-07-17", lugar_nac: "Murra", created_at: "2010-07-17 02:07:30", updated_at: "2010-07-20 02:14:07">]
+Query: landero
+total hits: 1, results delivered: 1
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: lopez~
+-->+(apellido2:lopez~ nombre1:lopez~ nombre2:lopez~ apellido1:lopez~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 1 results from AR: [#<Estudiante id: 3, nombre1: "Matilde", nombre2: "Lisbeth", apellido1: "Castro", apellido2: "López", email: "matilis.castro@gmail.com", sexo_id: 1, cedula: "B679-345-12", fecha_nac: "2010-07-17", lugar_nac: "Macuelizo", created_at: "2010-07-17 15:39:05", updated_at: "2010-07-20 02:17:34">]
+Query: lopez~
+total hits: 1, results delivered: 1
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: jose
+-->+(apellido2:jose nombre1:jose nombre2:jose apellido1:jose) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: jose
+total hits: 0, results delivered: 0
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: jose~
+-->+(apellido2:jose~ nombre1:jose~ nombre2:jose~ apellido1:jose~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: jose~
+total hits: 0, results delivered: 0
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: jose~0.2
+-->+(apellido2:jose~0.2 nombre1:jose~0.2 nombre2:jose~0.2 apellido1:jose~0.2) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 3 results from AR: [#<Estudiante id: 4, nombre1: "Josefa", nombre2: "Luisa", apellido1: "Martinez", apellido2: "Arauz", email: "Jf.martinez@gmail.com", sexo_id: 1, cedula: "A654-986", fecha_nac: "2010-07-17", lugar_nac: "Ocotal", created_at: "2010-07-17 20:39:13", updated_at: "2010-07-20 02:18:21">, #<Estudiante id: 2, nombre1: "Maria", nombre2: "José", apellido1: "Rodriguez", apellido2: "Arauz", email: "mariaj@gmail.com", sexo_id: 1, cedula: "M34-4565-23", fecha_nac: "2010-07-17", lugar_nac: "Ocotal", created_at: "2010-07-17 02:07:46", updated_at: "2010-07-20 02:16:13">, #<Estudiante id: 1, nombre1: "Pedro", nombre2: "Juan", apellido1: "Landero", apellido2: "Fernandez", email: "pedro.landero@gmail.com", sexo_id: 2, cedula: "M36-4567-23", fecha_nac: "2010-07-17", lugar_nac: "Murra", created_at: "2010-07-17 02:07:30", updated_at: "2010-07-20 02:14:07">]
+Query: jose~0.2
+total hits: 3, results delivered: 3
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: jose~0.3
+-->+(apellido2:jose~0.3 nombre1:jose~0.3 nombre2:jose~0.3 apellido1:jose~0.3) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 2 results from AR: [#<Estudiante id: 2, nombre1: "Maria", nombre2: "José", apellido1: "Rodriguez", apellido2: "Arauz", email: "mariaj@gmail.com", sexo_id: 1, cedula: "M34-4565-23", fecha_nac: "2010-07-17", lugar_nac: "Ocotal", created_at: "2010-07-17 02:07:46", updated_at: "2010-07-20 02:16:13">, #<Estudiante id: 4, nombre1: "Josefa", nombre2: "Luisa", apellido1: "Martinez", apellido2: "Arauz", email: "Jf.martinez@gmail.com", sexo_id: 1, cedula: "A654-986", fecha_nac: "2010-07-17", lugar_nac: "Ocotal", created_at: "2010-07-17 20:39:13", updated_at: "2010-07-20 02:18:21">]
+Query: jose~0.3
+total hits: 2, results delivered: 2
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: jose~0.5
+-->+(apellido2:jose~ nombre1:jose~ nombre2:jose~ apellido1:jose~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 0 results from AR: []
+Query: jose~0.5
+total hits: 0, results delivered: 0
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: josé~0.5
+-->+(apellido2:josé~ nombre1:josé~ nombre2:josé~ apellido1:josé~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 1 results from AR: [#<Estudiante id: 2, nombre1: "Maria", nombre2: "José", apellido1: "Rodriguez", apellido2: "Arauz", email: "mariaj@gmail.com", sexo_id: 1, cedula: "M34-4565-23", fecha_nac: "2010-07-17", lugar_nac: "Ocotal", created_at: "2010-07-17 02:07:46", updated_at: "2010-07-20 02:16:13">]
+Query: josé~0.5
+total hits: 1, results delivered: 1
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: josé~0.4
+-->+(apellido2:josé~0.4 nombre1:josé~0.4 nombre2:josé~0.4 apellido1:josé~0.4) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 1 results from AR: [#<Estudiante id: 2, nombre1: "Maria", nombre2: "José", apellido1: "Rodriguez", apellido2: "Arauz", email: "mariaj@gmail.com", sexo_id: 1, cedula: "M34-4565-23", fecha_nac: "2010-07-17", lugar_nac: "Ocotal", created_at: "2010-07-17 02:07:46", updated_at: "2010-07-20 02:16:13">]
+Query: josé~0.4
+total hits: 1, results delivered: 1
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: josé~0.3
+-->+(apellido2:josé~0.3 nombre1:josé~0.3 nombre2:josé~0.3 apellido1:josé~0.3) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 2 results from AR: [#<Estudiante id: 2, nombre1: "Maria", nombre2: "José", apellido1: "Rodriguez", apellido2: "Arauz", email: "mariaj@gmail.com", sexo_id: 1, cedula: "M34-4565-23", fecha_nac: "2010-07-17", lugar_nac: "Ocotal", created_at: "2010-07-17 02:07:46", updated_at: "2010-07-20 02:16:13">, #<Estudiante id: 4, nombre1: "Josefa", nombre2: "Luisa", apellido1: "Martinez", apellido2: "Arauz", email: "Jf.martinez@gmail.com", sexo_id: 1, cedula: "A654-986", fecha_nac: "2010-07-17", lugar_nac: "Ocotal", created_at: "2010-07-17 20:39:13", updated_at: "2010-07-20 02:18:21">]
+Query: josé~0.3
+total hits: 2, results delivered: 2
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: Heriberto
+-->+(apellido2:heriberto nombre1:heriberto nombre2:heriberto apellido1:heriberto) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 1 results from AR: [#<Estudiante id: 5, nombre1: "Heriberto", nombre2: "José", apellido1: "Jimenez", apellido2: "Krauss", email: "kraus@gmail.com", sexo_id: 1, cedula: "H678-223576", fecha_nac: "2010-07-20", lugar_nac: "Managua", created_at: "2010-07-20 03:24:54", updated_at: "2010-07-20 03:24:54">]
+Query: Heriberto
+total hits: 1, results delivered: 1
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: Heribérto
+-->+(apellido2:heribérto nombre1:heribérto nombre2:heribérto apellido1:heribérto) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 1 results from AR: [#<Estudiante id: 6, nombre1: "Heribérto", nombre2: "Manuel", apellido1: "Rodriguez", apellido2: "Vaz", email: "vaz@gmail.com", sexo_id: 1, cedula: "M56-637", fecha_nac: "2010-07-20", lugar_nac: "Managua", created_at: "2010-07-20 03:25:54", updated_at: "2010-07-20 03:25:54">]
+Query: Heribérto
+total hits: 1, results delivered: 1
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: Heribérto~
+-->+(apellido2:heribérto~ nombre1:heribérto~ nombre2:heribérto~ apellido1:heribérto~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 2 results from AR: [#<Estudiante id: 6, nombre1: "Heribérto", nombre2: "Manuel", apellido1: "Rodriguez", apellido2: "Vaz", email: "vaz@gmail.com", sexo_id: 1, cedula: "M56-637", fecha_nac: "2010-07-20", lugar_nac: "Managua", created_at: "2010-07-20 03:25:54", updated_at: "2010-07-20 03:25:54">, #<Estudiante id: 5, nombre1: "Heriberto", nombre2: "José", apellido1: "Jimenez", apellido2: "Krauss", email: "kraus@gmail.com", sexo_id: 1, cedula: "H678-223576", fecha_nac: "2010-07-20", lugar_nac: "Managua", created_at: "2010-07-20 03:24:54", updated_at: "2010-07-20 03:24:54">]
+Query: Heribérto~
+total hits: 2, results delivered: 2
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: Heriberto~
+-->+(apellido2:heriberto~ nombre1:heriberto~ nombre2:heriberto~ apellido1:heriberto~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 2 results from AR: [#<Estudiante id: 5, nombre1: "Heriberto", nombre2: "José", apellido1: "Jimenez", apellido2: "Krauss", email: "kraus@gmail.com", sexo_id: 1, cedula: "H678-223576", fecha_nac: "2010-07-20", lugar_nac: "Managua", created_at: "2010-07-20 03:24:54", updated_at: "2010-07-20 03:24:54">, #<Estudiante id: 6, nombre1: "Heribérto", nombre2: "Manuel", apellido1: "Rodriguez", apellido2: "Vaz", email: "vaz@gmail.com", sexo_id: 1, cedula: "M56-637", fecha_nac: "2010-07-20", lugar_nac: "Managua", created_at: "2010-07-20 03:25:54", updated_at: "2010-07-20 03:25:54">]
+Query: Heriberto~
+total hits: 2, results delivered: 2
