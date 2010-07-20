@@ -19,4 +19,17 @@ module BusquedasHelper
     end
     salida+"</table>"  
   end
+  def saca_cursos(s)
+    res=[]
+    s.cursos.each do |clase|
+      res << [clase.materia.descripcion, clase.nivel.descripcion]
+    end
+    res.sort!
+    salida =""
+    res.each do |lin|
+      salida << "<p> #{lin[0]} #{lin[1]} </p>"
+    end
+    salida
+  end
+  
 end

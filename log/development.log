@@ -7989,3 +7989,1860 @@ Rendering template within layouts/estudiantes
 Rendering estudiantes/show
   [4;35;1mSexo Load (0.2ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
 Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/estudiantes/3]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-20 19:16:46) [GET]
+  [4;36;1mEstudiante Load (3.3ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+  [4;35;1mSexo Load (1.4ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 414ms (View: 144, DB: 5) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-20 19:17:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 121ms (View: 31, DB: 1) | 200 OK [http://localhost/estudiantes/2]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-20 19:23:24) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 4) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mNota Load (7.8ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 4)) [0m
+  [4;36;1mCredito Load (0.4ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 6) [0m
+  [4;35;1mTipoNota Load (1.6ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.4ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+Completed in 116ms (View: 92, DB: 11) | 200 OK [http://localhost/estudiantes/4]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-20 19:23:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEstudiante Load (0.3ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+  [4;35;1mSexo Load (0.2ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mNota Load (0.7ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 1)) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;36;1mTipoNota Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;36;1mTipoNota Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;36;1mTipoNota Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+Completed in 64ms (View: 46, DB: 4) | 200 OK [http://localhost/estudiantes/1]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-20 19:24:21) [GET]
+  [4;35;1mEstudiante Load (1.3ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 126ms (View: 33, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-20 19:24:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mEstudiante Load (0.3ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 4) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mNota Load (0.4ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 4)) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 6) [0m
+  [4;36;1mTipoNota Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.4ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+Completed in 132ms (View: 116, DB: 2) | 200 OK [http://localhost/estudiantes/4]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-20 19:24:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+  [4;36;1mSexo Load (0.2ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mNota Load (0.5ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 2)) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 3) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+Completed in 54ms (View: 39, DB: 3) | 200 OK [http://localhost/estudiantes/2]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-20 19:24:38) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mEstudiante Load (0.3ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 6) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mNota Load (0.3ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 6)) [0m
+Completed in 33ms (View: 18, DB: 1) | 200 OK [http://localhost/estudiantes/6]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-20 19:26:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/show
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mNota Load (0.5ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 2)) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 3) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+Completed in 134ms (View: 117, DB: 3) | 200 OK [http://localhost/estudiantes/2]
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 19:35:51) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+
+ActionView::TemplateError (Missing template ../form/_form in view path app/views) on line #2 of app/views/estudiantes/new.html.erb:
+1: <h1>Añadir estudiante</h1>
+2: <%= render(:partial => "../form/form") %>
+3: 
+4: <%= link_to 'Hacia atrás', estudiantes_path %>
+
+    app/views/estudiantes/new.html.erb:2
+    app/controllers/estudiantes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (134.3ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 19:36:49) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+
+ActionView::TemplateError (Missing template form/_form.erb in view path app/views) on line #2 of app/views/estudiantes/new.html.erb:
+1: <h1>Añadir estudiante</h1>
+2: <%= render(:partial => "form/form") %>
+3: 
+4: <%= link_to 'Hacia atrás', estudiantes_path %>
+
+    app/views/estudiantes/new.html.erb:2
+    app/controllers/estudiantes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (134.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 19:37:24) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+
+ActionView::TemplateError (Missing template /app/views/form/_form.erb in view path app/views) on line #2 of app/views/estudiantes/new.html.erb:
+1: <h1>Añadir estudiante</h1>
+2: <%= render(:partial => "/app/views/form/form") %>
+3: 
+4: <%= link_to 'Hacia atrás', estudiantes_path %>
+
+    app/views/estudiantes/new.html.erb:2
+    app/controllers/estudiantes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (47.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 19:37:49) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+
+ActionView::TemplateError (Missing template /form/_form.erb in view path app/views) on line #2 of app/views/estudiantes/new.html.erb:
+1: <h1>Añadir estudiante</h1>
+2: <%= render(:partial => "/form/form") %>
+3: 
+4: <%= link_to 'Hacia atrás', estudiantes_path %>
+
+    app/views/estudiantes/new.html.erb:2
+    app/controllers/estudiantes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (48.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 19:42:04) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+Rendered forms/_field (0.6ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (115.5ms)
+Completed in 223ms (View: 125, DB: 0) | 200 OK [http://localhost/estudiantes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 19:46:03) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/shared/_form.html.erb:
+1: <% error_handling_form_for(@estudiante) do |f| -%> 
+2:     <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
+3:     <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
+4:     <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/shared/_form.html.erb:1
+    app/views/docentes/new.html.erb:2
+    app/controllers/docentes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (58.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 19:49:50) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+
+ActionView::TemplateError (undefined local variable or method `docentes' for #<ActionView::Base:0x10300c298>) on line #2 of app/views/docentes/new.html.erb:
+1: <h1>Añadir docente</h1>
+2: <%= render(:partial => 'shared/form', @personas => docentes) %>
+3: <%= link_to 'Hacia atrás', docentes_path %>
+
+    app/views/docentes/new.html.erb:2
+    app/controllers/docentes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (46.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 19:50:11) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/shared/_form.html.erb:
+1: <% error_handling_form_for(@persona) do |f| -%> 
+2:     <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
+3:     <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
+4:     <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/shared/_form.html.erb:1
+    app/views/docentes/new.html.erb:2
+    app/controllers/docentes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (56.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 19:51:08) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/shared/_form.html.erb:
+1: <% error_handling_form_for(@personas) do |f| -%> 
+2:     <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
+3:     <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
+4:     <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/shared/_form.html.erb:1
+    app/views/docentes/new.html.erb:2
+    app/controllers/docentes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (56.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 19:52:08) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/shared/_form.html.erb:
+1: <% error_handling_form_for(@personas) do |f| -%> 
+2:     <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
+3:     <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
+4:     <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/shared/_form.html.erb:1
+    app/views/docentes/new.html.erb:2
+    app/controllers/docentes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (57.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 19:52:27) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/shared/_form.html.erb:
+1: <% error_handling_form_for(@personas) do |f| -%> 
+2:     <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
+3:     <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
+4:     <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/shared/_form.html.erb:1
+    app/views/docentes/new.html.erb:2
+    app/controllers/docentes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (56.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 19:53:21) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (117.1ms)
+Completed in 134ms (View: 126, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 19:56:34) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "personas"=>{"nombre2"=>"Jesús", "cedula"=>"H456-2346", "lugar_nac"=>"Ocotal", "fecha_nac(1i)"=>"1982", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"Castillo", "apellido2"=>"Padilla", "email"=>"mcastillo@gmail.com", "nombre1"=>"Mariel"}}
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (27.6ms)
+Completed in 37ms (View: 29, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#index (for 127.0.0.1 at 2010-07-20 19:57:10) [GET]
+  [4;35;1mDocente Load (27.6ms)[0m   [0mSELECT * FROM "docentes" [0m
+Rendering template within layouts/docentes
+Rendering docentes/index
+Completed in 52ms (View: 18, DB: 28) | 200 OK [http://localhost/docentes]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:11:25) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (27.5ms)
+Completed in 36ms (View: 29, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:17:12) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "personas"=>{"nombre2"=>"Elisa", "cedula"=>"FGR-34-8754", "lugar_nac"=>"Ocotal", "fecha_nac(1i)"=>"1977", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"Castillo", "apellido2"=>"Berrios", "email"=>"mareli@gmail.com", "nombre1"=>"Maria"}}
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (27.0ms)
+Completed in 36ms (View: 28, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:20:33) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "personas"=>{"nombre2"=>"Elisa", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"1985", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"Maria"}}
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (101.5ms)
+Completed in 111ms (View: 103, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:22:30) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "personas"=>{"nombre2"=>"Elisa", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"1990", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"Maria"}}
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (27.5ms)
+Completed in 37ms (View: 29, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:23:01) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "personas"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"1990", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"Josefina"}}
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (26.9ms)
+Completed in 36ms (View: 28, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:23:25) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "personas"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"1990", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"kkkkk"}}
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.2ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (102.6ms)
+Completed in 112ms (View: 104, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:24:29) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "personas"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"1990", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"hhhh"}}
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (27.2ms)
+Completed in 36ms (View: 29, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:26:07) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (27.6ms)
+Completed in 37ms (View: 29, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:26:18) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "personas"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"1990", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"pedrito"}}
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (75.7ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (209.6ms)
+Completed in 219ms (View: 211, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 20:27:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (27.0ms)
+Completed in 42ms (View: 33, DB: 1) | 200 OK [http://localhost/docentes/edit/1]
+
+
+Processing DocentesController#index (for 127.0.0.1 at 2010-07-20 20:30:26) [GET]
+  [4;35;1mDocente Load (0.9ms)[0m   [0mSELECT * FROM "docentes" [0m
+Rendering template within layouts/docentes
+Rendering docentes/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/docentes]
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 20:30:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (27.1ms)
+Completed in 41ms (View: 33, DB: 1) | 200 OK [http://localhost/docentes/1/edit]
+
+
+Processing DocentesController#index (for 127.0.0.1 at 2010-07-20 20:53:19) [GET]
+  [4;36;1mDocente Load (0.9ms)[0m   [0;1mSELECT * FROM "docentes" [0m
+Rendering template within layouts/docentes
+Rendering docentes/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/docentes]
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 20:53:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+ERROR: compiling _run_erb_app47views47docentes47edit46html46erb RAISED compile error
+/Users/zubi/notas_cesecom/app/views/docentes/edit.html.erb:2: syntax error, unexpected ';', expecting ')'
+...ersonas => @docentes} ).to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47docentes47edit46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Editando los datos de un docente</h1>\n"
+; @output_buffer.concat(( render(:partial => 'shared/form', :locals => {:personas => @docentes} ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to 'Mostrar', @docente ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Hacia atrás', docentes_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zubi/notas_cesecom/app/views/docentes/edit.html.erb:7:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zubi/notas_cesecom/app/views/docentes/edit.html.erb:2: syntax error, unexpected ';', expecting ')'
+...ersonas => @docentes} ).to_s); @output_buffer.concat "\n"
+                              ^) on line #2 of app/views/docentes/edit.html.erb:
+1: <h1>Editando los datos de un docente</h1>
+2: <%= render(:partial => 'shared/form', :locals => {:personas => @docentes} %>
+3: <%= link_to 'Mostrar', @docente %> |
+4: <%= link_to 'Hacia atrás', docentes_path %>
+
+    app/views/docentes/edit.html.erb:7:in `compile!'
+
+Rendered rescues/_trace (40.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 20:53:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (27.8ms)
+Completed in 126ms (View: 118, DB: 1) | 200 OK [http://localhost/docentes/1/edit]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:55:14) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (105.7ms)
+Completed in 118ms (View: 111, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 20:55:24) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "personas"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"1990", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"feli"}}
+Rendering template within layouts/docentes
+Rendering docentes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (26.8ms)
+Completed in 37ms (View: 28, DB: 0) | 200 OK [http://localhost/docentes/new]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-20 21:22:45) [GET]
+  [4;36;1mEstudiante Load (1.3ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 158ms (View: 29, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#edit (for 127.0.0.1 at 2010-07-20 21:22:49) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/edit
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_personas (104.2ms)
+Completed in 129ms (View: 115, DB: 1) | 200 OK [http://localhost/estudiantes/2/edit]
+
+
+Processing EstudiantesController#edit (for 127.0.0.1 at 2010-07-20 21:24:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/edit
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_personas (26.5ms)
+Completed in 47ms (View: 33, DB: 1) | 200 OK [http://localhost/estudiantes/2/edit]
+
+
+Processing EstudiantesController#2 (for 127.0.0.1 at 2010-07-20 21:25:10) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "id"=>"edit", "personas"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"1990", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"pepe"}}
+
+ActionController::UnknownAction (No action responded to 2. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EstudiantesController#2 (for 127.0.0.1 at 2010-07-20 22:06:00) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "id"=>"edit", "personas"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"1990", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"pepe"}}
+
+ActionController::UnknownAction (No action responded to 2. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 22:06:24) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.2ms)
+Rendered shared/_form (103.0ms)
+Completed in 122ms (View: 108, DB: 0) | 200 OK [http://localhost/estudiantes/new]
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 22:06:36) [POST]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "personas"=>{"nombre2"=>"", "cedula"=>"", "lugar_nac"=>"", "fecha_nac(1i)"=>"1990", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"20", "apellido1"=>"", "apellido2"=>"", "email"=>"", "nombre1"=>"pepe"}}
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered shared/_form (26.9ms)
+Completed in 42ms (View: 28, DB: 0) | 200 OK [http://localhost/estudiantes/new]
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 22:12:00) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #2 of app/views/estudiantes/new.html.erb:
+1: <h1>Añadir estudiante</h1>
+2: <% error_handling_form_for(@estudiantes) do |f| -%> 
+3: <%= render(:partial => 'shared/persona', @estudiantes => :personas) %>
+4: <% end %>
+5: <%= link_to 'Hacia atrás', estudiantes_path %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/estudiantes/new.html.erb:2
+    app/controllers/estudiantes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (47.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 22:13:19) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #2 of app/views/estudiantes/new.html.erb:
+1: <h1>Añadir estudiante</h1>
+2: <% error_handling_form_for(@estudiantes) do |f| -%> 
+3: <%= render(:partial => 'shared/persona', @estudiantes => f) %>
+4: <% end %>
+5: <%= link_to 'Hacia atrás', estudiantes_path %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/estudiantes/new.html.erb:2
+    app/controllers/estudiantes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (47.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 22:15:52) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+ERROR: compiling _run_erb_app47views47estudiantes47new46html46erb RAISED compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:2: syntax error, unexpected ';', expecting ')'
+...er(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47estudiantes47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>A\303\261adir estudiante</h1>\n"
+; @output_buffer.concat(( render(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to 'Hacia atrás', estudiantes_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:6:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/zubi/notas_cesecom/app/controllers/estudiantes_controller.rb:29:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:2: syntax error, unexpected ';', expecting ')'
+...er(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+                              ^) on line #2 of app/views/estudiantes/new.html.erb:
+1: <h1>Añadir estudiante</h1>
+2: <%= render(:partial => 'form' %>
+3: <%= link_to 'Hacia atrás', estudiantes_path %>
+
+    app/views/estudiantes/new.html.erb:6:in `compile!'
+    app/controllers/estudiantes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 22:17:12) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+ERROR: compiling _run_erb_app47views47estudiantes47new46html46erb RAISED compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:2: syntax error, unexpected ';', expecting ')'
+...er(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47estudiantes47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>A\303\261adir estudiante</h1>\n"
+; @output_buffer.concat(( render(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to 'Hacia atrás', estudiantes_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:6:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/zubi/notas_cesecom/app/controllers/estudiantes_controller.rb:29:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:2: syntax error, unexpected ';', expecting ')'
+...er(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+                              ^) on line #2 of app/views/estudiantes/new.html.erb:
+1: <h1>Añadir estudiante</h1>
+2: <%= render(:partial => 'form' %>
+3: <%= link_to 'Hacia atrás', estudiantes_path %>
+
+    app/views/estudiantes/new.html.erb:6:in `compile!'
+    app/controllers/estudiantes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (135.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 22:18:59) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+ERROR: compiling _run_erb_app47views47estudiantes47new46html46erb RAISED compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:2: syntax error, unexpected ';', expecting ')'
+...er(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47estudiantes47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>A\303\261adir estudiante</h1>\n"
+; @output_buffer.concat(( render(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to 'Hacia atrás', estudiantes_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:6:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/zubi/notas_cesecom/app/controllers/estudiantes_controller.rb:29:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:2: syntax error, unexpected ';', expecting ')'
+...er(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+                              ^) on line #2 of app/views/estudiantes/new.html.erb:
+1: <h1>Añadir estudiante</h1>
+2: <%= render(:partial => 'form' %>
+3: <%= link_to 'Hacia atrás', estudiantes_path %>
+
+    app/views/estudiantes/new.html.erb:6:in `compile!'
+    app/controllers/estudiantes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-20 22:20:05) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/new
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered estudiantes/_form (32.9ms)
+Completed in 55ms (View: 41, DB: 0) | 200 OK [http://localhost/estudiantes/new]
+
+
+Processing EstudiantesController#edit (for 127.0.0.1 at 2010-07-20 22:20:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEstudiante Load (0.3ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/edit
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered estudiantes/_form (29.9ms)
+Completed in 128ms (View: 35, DB: 1) | 200 OK [http://localhost/estudiantes/edit/1]
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 22:23:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/docentes/_form.html.erb:
+1: <% error_handling_form_for(@estudiante) do |f| -%> 
+2:     <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
+3:     <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
+4:     <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/docentes/_form.html.erb:1
+    app/views/docentes/edit.html.erb:2
+
+Rendered rescues/_trace (52.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 22:23:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/docentes/_form.html.erb:
+1: <% error_handling_form_for(@docentes) do |f| -%> 
+2:     <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
+3:     <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
+4:     <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/docentes/_form.html.erb:1
+    app/views/docentes/edit.html.erb:2
+
+Rendered rescues/_trace (51.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 22:26:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/docentes/_form.html.erb:
+1: <% error_handling_form_for(@docentes) do |f| -%> 
+2:     <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
+3:     <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
+4:     <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/docentes/_form.html.erb:1
+    app/views/docentes/edit.html.erb:2
+
+Rendered rescues/_trace (52.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 22:27:05) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+ERROR: compiling _run_erb_app47views47docentes47new46html46erb RAISED compile error
+/Users/zubi/notas_cesecom/app/views/docentes/new.html.erb:2: syntax error, unexpected ';', expecting ')'
+...er(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47docentes47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>A\303\261adir docente</h1>\n"
+; @output_buffer.concat(( render(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to 'Hacia atrás', docentes_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zubi/notas_cesecom/app/views/docentes/new.html.erb:6:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/zubi/notas_cesecom/app/controllers/docentes_controller.rb:29:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zubi/notas_cesecom/app/views/docentes/new.html.erb:2: syntax error, unexpected ';', expecting ')'
+...er(:partial => 'form' ).to_s); @output_buffer.concat "\n"
+                              ^) on line #2 of app/views/docentes/new.html.erb:
+1: <h1>Añadir docente</h1>
+2: <%= render(:partial => 'form' %>
+3: <%= link_to 'Hacia atrás', docentes_path %>
+
+    app/views/docentes/new.html.erb:6:in `compile!'
+    app/controllers/docentes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (134.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#new (for 127.0.0.1 at 2010-07-20 22:27:44) [GET]
+Rendering template within layouts/docentes
+Rendering docentes/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/docentes/_form.html.erb:
+1: <% error_handling_form_for(@docentes) do |f| -%> 
+2:     <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
+3:     <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
+4:     <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/docentes/_form.html.erb:1
+    app/views/docentes/new.html.erb:2
+    app/controllers/docentes_controller.rb:29:in `new'
+
+Rendered rescues/_trace (141.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 22:27:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/docentes/_form.html.erb:
+1: <% error_handling_form_for(@docentes) do |f| -%> 
+2:     <%= f.text_field :nombre1, :label => 'Primer nombre' %> 
+3:     <%= f.text_field :nombre2, :label => 'Segundo nombre' %> 
+4:     <%= f.text_field :apellido1,  :label => 'Primer apellido' %>
+
+    app/helpers/application_helper.rb:10:in `error_handling_form_for'
+    app/views/docentes/_form.html.erb:1
+    app/views/docentes/edit.html.erb:2
+
+Rendered rescues/_trace (138.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 22:29:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered docentes/_form (31.7ms)
+Completed in 45ms (View: 37, DB: 1) | 200 OK [http://localhost/docentes/edit/1]
+
+
+Processing DocentesController#update (for 127.0.0.1 at 2010-07-20 22:31:02) [PUT]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "id"=>"1", "docente"=>{"nombre2"=>"José", "cedula"=>"M76-976-233", "lugar_nac"=>"Totogalpa", "fecha_nac(1i)"=>"1981", "fecha_nac(2i)"=>"7", "sexo_id"=>"2", "fecha_nac(3i)"=>"17", "apellido1"=>"García", "apellido2"=>"Ortega", "email"=>"edg.ortega@gmail.com", "nombre1"=>"Edgard"}}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+  [4;35;1mDocente Update (0.4ms)[0m   [0mUPDATE "docentes" SET "updated_at" = '2010-07-20 20:31:02', "email" = 'edg.ortega@gmail.com', "fecha_nac" = '1981-07-17', "cedula" = 'M76-976-233', "apellido2" = 'Ortega', "nombre2" = 'José', "apellido1" = 'García', "sexo_id" = 2, "lugar_nac" = 'Totogalpa' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/docentes/1
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/docentes/1]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 22:31:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/docentes/1]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 22:31:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/docentes/2]
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 22:31:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered docentes/_form (108.5ms)
+Completed in 118ms (View: 110, DB: 1) | 200 OK [http://localhost/docentes/2/edit]
+
+
+Processing DocentesController#update (for 127.0.0.1 at 2010-07-20 22:32:10) [PUT]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "id"=>"2", "docente"=>{"nombre2"=>"Cesar", "cedula"=>"H67-63366-233", "lugar_nac"=>"Ocotal", "fecha_nac(1i)"=>"1982", "fecha_nac(2i)"=>"7", "sexo_id"=>"1", "fecha_nac(3i)"=>"17", "apellido1"=>"Fernandez", "apellido2"=>"Gutierrez", "email"=>"cesar@gmail.com", "nombre1"=>"Augusto"}}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+  [4;35;1mDocente Update (0.4ms)[0m   [0mUPDATE "docentes" SET "updated_at" = '2010-07-20 20:32:10', "email" = 'cesar@gmail.com', "fecha_nac" = '1982-07-17', "cedula" = 'H67-63366-233', "apellido2" = 'Gutierrez', "nombre2" = 'Cesar', "apellido1" = 'Fernandez', "sexo_id" = 1, "lugar_nac" = 'Ocotal' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/docentes/2
+Completed in 291ms (DB: 1) | 302 Found [http://localhost/docentes/2]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 22:32:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mDocente Load (0.4ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://localhost/docentes/2]
+
+
+Processing DocentesController#index (for 127.0.0.1 at 2010-07-20 22:32:16) [GET]
+  [4;35;1mDocente Load (0.8ms)[0m   [0mSELECT * FROM "docentes" [0m
+Rendering template within layouts/docentes
+Rendering docentes/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/docentes]
+
+
+Processing DocentesController#index (for 127.0.0.1 at 2010-07-20 22:33:29) [GET]
+  [4;36;1mDocente Load (0.9ms)[0m   [0;1mSELECT * FROM "docentes" [0m
+Rendering template within layouts/docentes
+Rendering docentes/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #11 of app/views/docentes/index.html.erb:
+8:     <th>Cédula</th>
+9:   </tr>
+10: 
+11: <% @estudiantes.each do |estudiante| %>
+12:   <tr>
+13:     <td><%=h estudiante.nombre1 %>
+14:     <%=h estudiante.nombre2 %>
+
+    app/views/docentes/index.html.erb:11
+    app/controllers/docentes_controller.rb:7:in `index'
+
+Rendered rescues/_trace (44.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#index (for 127.0.0.1 at 2010-07-20 22:34:04) [GET]
+  [4;35;1mDocente Load (0.9ms)[0m   [0mSELECT * FROM "docentes" [0m
+Rendering template within layouts/docentes
+Rendering docentes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/docentes]
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 22:34:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered docentes/_form (30.0ms)
+Completed in 40ms (View: 32, DB: 1) | 200 OK [http://localhost/docentes/2/edit]
+
+
+Processing DocentesController#update (for 127.0.0.1 at 2010-07-20 22:34:18) [PUT]
+  Parameters: {"commit"=>"Enviar", "authenticity_token"=>"4X4xepeQGktKsPqUCX4+dIrYa9zDyIw0SST6Sf3sBH4=", "id"=>"2", "docente"=>{"nombre2"=>"Cesar", "cedula"=>"H67-63366-233", "lugar_nac"=>"Ocotal", "fecha_nac(1i)"=>"1982", "fecha_nac(2i)"=>"7", "sexo_id"=>"2", "fecha_nac(3i)"=>"17", "apellido1"=>"Fernandez", "apellido2"=>"Gutierrez", "email"=>"cesar@gmail.com", "nombre1"=>"Augusto"}}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+  [4;35;1mDocente Update (0.4ms)[0m   [0mUPDATE "docentes" SET "updated_at" = '2010-07-20 20:34:18', "sexo_id" = 2 WHERE "id" = 2[0m
+Redirected to http://localhost:3000/docentes/2
+Completed in 60ms (DB: 1) | 302 Found [http://localhost/docentes/2]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 22:34:19) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/docentes/2]
+
+
+Processing DocentesController#index (for 127.0.0.1 at 2010-07-20 22:35:02) [GET]
+  [4;35;1mDocente Load (0.9ms)[0m   [0mSELECT * FROM "docentes" [0m
+Rendering template within layouts/docentes
+Rendering docentes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/docentes]
+
+
+Processing DocentesController#edit (for 127.0.0.1 at 2010-07-20 22:35:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/edit
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered docentes/_form (103.3ms)
+Completed in 113ms (View: 105, DB: 1) | 200 OK [http://localhost/docentes/edit/1]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 22:35:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/docentes/1]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 22:36:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+  [4;36;1mSexo Load (0.2ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/docentes/1]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 22:36:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+  [4;36;1mSexo Load (0.2ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/docentes/2]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 23:16:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+  [4;36;1mSexo Load (0.2ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+
+ActionView::TemplateError (undefined method `sacacursos' for #<ActionView::Base:0x103609790>) on line #28 of app/views/docentes/show.html.erb:
+25: 	  <b>e-mail:</b>
+26: 	  <%=h @docente.email %>
+27: 	</p>
+28: 	<%= sacacursos(@docente)%>
+29: 
+30: <%= link_to 'Edit', edit_docente_path(@docente) %> |
+31: <%= link_to 'Back', docentes_path %>
+
+    app/views/docentes/show.html.erb:28
+    app/controllers/docentes_controller.rb:18:in `show'
+
+Rendered rescues/_trace (44.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 23:17:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+
+ActionView::TemplateError (undefined method `sacacursos' for #<ActionView::Base:0x1034ed7f8>) on line #28 of app/views/docentes/show.html.erb:
+25: 	  <b>e-mail:</b>
+26: 	  <%=h @docente.email %>
+27: 	</p>
+28: 	<%= sacacursos(@docente)%>
+29: 
+30: <%= link_to 'Edit', edit_docente_path(@docente) %> |
+31: <%= link_to 'Back', docentes_path %>
+
+    app/views/docentes/show.html.erb:28
+    app/controllers/docentes_controller.rb:18:in `show'
+
+Rendered rescues/_trace (128.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 23:18:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCurso Load (0.5ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos".docente_id = 2) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mNivel Load (0.4ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 131ms (View: 121, DB: 2) | 200 OK [http://localhost/docentes/2]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 23:20:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+  [4;36;1mSexo Load (0.2ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCurso Load (0.4ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos".docente_id = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 110ms (View: 101, DB: 1) | 200 OK [http://localhost/docentes/2]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-20 23:20:28) [GET]
+  [4;36;1mCurso Load (1.1ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+Rendering template within layouts/cursos
+Rendering cursos/index
+Completed in 51ms (View: 43, DB: 1) | 200 OK [http://localhost/cursos]
+
+
+Processing DocentesController#index (for 127.0.0.1 at 2010-07-20 23:22:49) [GET]
+  [4;35;1mDocente Load (0.9ms)[0m   [0mSELECT * FROM "docentes" [0m
+Rendering template within layouts/docentes
+Rendering docentes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/docentes]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 23:22:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+  [4;35;1mSexo Load (0.2ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCurso Load (0.6ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos".docente_id = 1) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+Completed in 37ms (View: 28, DB: 2) | 200 OK [http://localhost/docentes/1]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 23:23:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+  [4;36;1mSexo Load (0.2ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCurso Load (0.4ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos".docente_id = 2) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 33ms (View: 25, DB: 1) | 200 OK [http://localhost/docentes/2]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 23:24:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocente Load (0.3ms)[0m   [0;1mSELECT * FROM "docentes" WHERE ("docentes"."id" = 1) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+  [4;35;1mSexo Load (0.2ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCurso Load (0.6ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos".docente_id = 1) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+Completed in 115ms (View: 29, DB: 2) | 200 OK [http://localhost/docentes/1]
+
+
+Processing DocentesController#show (for 127.0.0.1 at 2010-07-20 23:24:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDocente Load (0.3ms)[0m   [0mSELECT * FROM "docentes" WHERE ("docentes"."id" = 2) [0m
+Rendering template within layouts/docentes
+Rendering docentes/show
+  [4;36;1mSexo Load (0.2ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCurso Load (0.4ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos".docente_id = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 35ms (View: 25, DB: 1) | 200 OK [http://localhost/docentes/2]

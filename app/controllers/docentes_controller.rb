@@ -41,7 +41,6 @@ class DocentesController < ApplicationController
   # POST /docentes.xml
   def create
     @docente = Docente.new(params[:docente])
-
     respond_to do |format|
       if @docente.save
         format.html { redirect_to(@docente, :notice => 'Docente was successfully created.') }

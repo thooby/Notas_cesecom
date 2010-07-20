@@ -1,48 +1,31 @@
 <p>
-  <b>Nombre1:</b>
-  <%=h @docente.nombre1 %>
-</p>
-
-<p>
-  <b>Nombre2:</b>
-  <%=h @docente.nombre2 %>
-</p>
-
-<p>
-  <b>Apellido1:</b>
-  <%=h @docente.apellido1 %>
-</p>
-
-<p>
-  <b>Apellido2:</b>
-  <%=h @docente.apellido2 %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%=h @docente.email %>
-</p>
-
-<p>
-  <b>Sexo:</b>
-  <%=h @docente.sexo_id %>
-</p>
-
-<p>
-  <b>Cedula:</b>
-  <%=h @docente.cedula %>
-</p>
-
-<p>
-  <b>Fecha nac:</b>
-  <%=h @docente.fecha_nac %>
-</p>
-
-<p>
-  <b>Lugar nac:</b>
-  <%=h @docente.lugar_nac %>
-</p>
-
+  	<h2>Datos personales de docente</h2>
+	<p>
+	  <b>Nombres:</b>
+	  <%=h @docente.nombre1 %>
+	  <%=h @docente.nombre2 %>
+	<br />
+	  <b>Apellidos:</b>
+	  <%=h @docente.apellido1 %>
+	  <%=h @docente.apellido2 %>
+	</p>
+	<p>
+	 <b>Sexo:</b>
+	  <%=h @docente.sexo.descripcion %>
+	  <b>Cédula:</b>
+	  <%=h @docente.cedula %>
+	<br />
+	  <b>Fecha de nacimiento:</b>
+	  <%=h @docente.fecha_nac %>
+	<br />
+	  <b>Lugar de nacimiento:</b>
+	  <%=h @docente.lugar_nac %>
+	</p>
+	<p>
+	  <b>e-mail:</b>
+	  <%=h @docente.email %>
+	</p>
+	<%= saca_cursos(@docente)%>
 
 <%= link_to 'Edit', edit_docente_path(@docente) %> |
 <%= link_to 'Back', docentes_path %>

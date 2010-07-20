@@ -1,3 +1,4 @@
+<h2>Datos personales</h2>
 <p>
   <b>Nombres:</b>
   <%=h @estudiante.nombre1 %>
@@ -13,7 +14,7 @@
 <p>
  <b>Sexo:</b>
   <%=h @estudiante.sexo.descripcion %>
-  <b>Cedula:</b>
+  <b>Cédula:</b>
   <%=h @estudiante.cedula %>
 <br />
   <b>Fecha de nacimiento:</b>
@@ -26,6 +27,7 @@
   <b>e-mail:</b>
   <%=h @estudiante.email %>
 </p>
-
+<h2>Notas</h2>
+     <%= saca_notas(@estudiante) %>
 <%= link_to 'Editar', edit_estudiante_path(@estudiante) %> |
 <%= link_to 'Hacia atrás', estudiantes_path %>

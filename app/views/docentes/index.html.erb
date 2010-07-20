@@ -1,36 +1,31 @@
-<h1>Listing docentes</h1>
+<h1>Lista de docentes</h1>
 
 <table>
   <tr>
-    <th>Nombre1</th>
-    <th>Nombre2</th>
-    <th>Apellido1</th>
-    <th>Apellido2</th>
+    <th>Nombre</th>
     <th>Email</th>
     <th>Sexo</th>
-    <th>Cedula</th>
-    <th>Fecha nac</th>
-    <th>Lugar nac</th>
+    <th>Cédula</th>
   </tr>
 
 <% @docentes.each do |docente| %>
   <tr>
-    <td><%=h docente.nombre1 %></td>
-    <td><%=h docente.nombre2 %></td>
-    <td><%=h docente.apellido1 %></td>
-    <td><%=h docente.apellido2 %></td>
+    <td><%=h docente.nombre1 %>
+    <%=h docente.nombre2 %>
+    <%=h docente.apellido1 %>
+    <%=h docente.apellido2 %></td>
     <td><%=h docente.email %></td>
-    <td><%=h docente.sexo_id %></td>
+    <td><%=h docente.sexo.descripcion %></td>
     <td><%=h docente.cedula %></td>
-    <td><%=h docente.fecha_nac %></td>
-    <td><%=h docente.lugar_nac %></td>
-    <td><%= link_to 'Show', docente %></td>
-    <td><%= link_to 'Edit', edit_docente_path(docente) %></td>
-    <td><%= link_to 'Destroy', docente, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Mostrar', docente %></td>
+    <td><%= link_to 'Editar', edit_docente_path(docente) %></td>
+    <td><%= link_to 'Eliminar', docente, :confirm => '¿Está usted seguro/a?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New docente', new_docente_path %>
+<br />
+
+<%= link_to 'Añadir docente', new_docente_path %>
