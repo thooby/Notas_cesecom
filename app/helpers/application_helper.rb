@@ -9,4 +9,7 @@ module ApplicationHelper
     options[:builder] = ErrorHandlingFormBuilder unless options.nil? 
     form_for(record_or_name_or_array, *args, &proc)
   end
+  def add_estudiante_link(name) link_to_function name do |page|
+  page.insert_html :bottom, :tasks, :partial => 'task', :object => Estudiante.new
+  end end
 end

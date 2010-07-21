@@ -12,7 +12,7 @@
 
 <% @cursos.each do |curso| %>
   <tr>
-    <td><%=h curso.materia_id %></td>
+    <td><%=h curso.materia.titulo %></td>
     <td><%=h curso.fecha_inicio %></td>
     <td><%=h curso.fecha_finalizacion %></td>
     <td><%=h curso.nivel_id %></td>

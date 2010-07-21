@@ -9,7 +9,8 @@ class CursosController < ApplicationController
       format.xml  { render :xml => @cursos }
     end
   end
-
+def matricula
+end
   # GET /cursos/1
   # GET /cursos/1.xml
   def show
@@ -25,7 +26,7 @@ class CursosController < ApplicationController
   # GET /cursos/new.xml
   def new
     @curso = Curso.new
-
+    @curso.estudiantes.build
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @curso }

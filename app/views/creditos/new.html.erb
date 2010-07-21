@@ -6,13 +6,13 @@
   <p>
     <%=
 	    @estudiantes = Estudiante.find(:all)
-	    f.collection_select(:estudiante_id, @estudiantes, :id, :nombre1 )
+	    f.collection_select(:estudiante_id, @estudiantes, :id, :nombre_completo )
 	%>
   </p>
   <p>
 	<%=
 	    @cursos = Curso.find(:all)
-	    f.collection_select(:curso_id, @cursos, :id, :materia_id )
+	    f.collection_select(:curso_id, @cursos, :id, :curso_caract)
 	%>
    
   </p>

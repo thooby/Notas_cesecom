@@ -3,7 +3,7 @@ class BusquedasController < ApplicationController
   end
   def index
     if params[:q]
-      query = params[:q]
+      query = params[:q]+"~"
       @estudiantes = Estudiante.find_with_ferret(query, :limit => :all)
     end
   end

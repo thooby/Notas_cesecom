@@ -1,15 +1,15 @@
-<h1>Listing creditos</h1>
+<h1>Listando personas y cursos matriculados</h1>
 
 <table>
   <tr>
-    <th>Estudiante</th>
-    <th>Curso</th>
+    <th><%= link_to 'Estudiante', sort_params(Credito, :estudiante_id) %></th>
+    <th><%= link_to 'Curso', sort_params(Credito, :curso_id) %></th>
   </tr>
 
 <% @creditos.each do |credito| %>
   <tr>
-    <td><%=h credito.estudiante_id %></td>
-    <td><%=h credito.curso_id %></td>
+    <td><%=h credito.estudiante.nombre_completo %></td>
+    <td><%= credito.curso.curso_caract %></td>
     <td><%= link_to 'Show', credito %></td>
     <td><%= link_to 'Edit', edit_credito_path(credito) %></td>
     <td><%= link_to 'Destroy', credito, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -19,4 +19,4 @@
 
 <br />
 
-<%= link_to 'New credito', new_credito_path %>
+<%= link_to 'Crear matricula', new_credito_path %>

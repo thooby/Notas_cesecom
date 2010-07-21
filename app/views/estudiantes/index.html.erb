@@ -10,13 +10,11 @@
     <th>Sexo</th>
     <th>Cédula</th>
   </tr>
-
+<%  @estudiantes = @estudiantes.sort_by { |a| [a.apellido1.downcase, a.apellido2.downcase] } %>
+<%= debug(@estudiantes) %>
 <% @estudiantes.each do |estudiante| %>
   <tr>
-    <td><%=h estudiante.nombre1 %>
-    <%=h estudiante.nombre2 %>
-    <%=h estudiante.apellido1 %>
-    <%=h estudiante.apellido2 %></td>
+    <td><%=h estudiante.nombre_completo %>
     <td><%=h estudiante.email %></td>
     <td><%=h estudiante.sexo.descripcion %></td>
     <td><%=h estudiante.cedula %></td>

@@ -1,6 +1,7 @@
 <% form_for(@curso) do |f| %>
   <%= f.error_messages %>
+  <%= add_estudiante_link "Estudiante nuevo" %>
   <%= f.label :materia_id %><br />
   <%= f.text_field :area_tot %>
-  <%= add_estudiante_link "Estudiante nuevo" %>
 <%= f.submit 'Enviar' %>
+<% end %>

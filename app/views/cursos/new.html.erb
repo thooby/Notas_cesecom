@@ -2,11 +2,12 @@
 
 <% form_for(@curso) do |f| %>
   <%= f.error_messages %>
+  <%= add_estudiante_link "Estudiante nuevo" %>
 
   <p>
 	<%=
 	    @materias = Materia.find(:all)
-	    f.collection_select(:materia_id, @materias, :id, : )
+	    f.collection_select(:materia_id, @materias, :id, :descripcion )
 	%>
 	
    

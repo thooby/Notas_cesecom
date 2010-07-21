@@ -2,8 +2,7 @@ class CreditosController < ApplicationController
   # GET /creditos
   # GET /creditos.xml
   def index
-    @creditos = Credito.all
-
+    @creditos = Credito.all(:order => sortable_order(Credito))
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @creditos }

@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :nivels
 
   map.resources :materias
-
+  map.connect 'cursos/matricula', :controller => 'cursos', :action => 'matricula'
   map.resources :cursos
 
   map.resources :tipo_notas
@@ -14,7 +14,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :creditos
 
   map.resources :docentes
-
   map.resources :estudiantes
   #map.resources :busquedas
 

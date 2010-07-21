@@ -1,0 +1,23 @@
+<div class="estudiante">
+<% new_or_existing = estudiante.new_record? ? 'new' : 'existing' %>
+<% prefix = "curso[#{new_or_existing}_estudiante_attributes][]" %>
+
+<% fields_for prefix, estudiante do |persona_form| -%>
+  <p>
+    primer nombre: <%= estudiante_form.text_field :nombre1 %>
+    segundo nombre: <%= estudiante_form.text_field :nombre2 %><br />
+    primer apellido: <%= estudiante_form.text_field :apellido1 %>
+    segundo apellido: <%= estudiante_form.text_field :apellido2 %><br />
+    e-mail: <%= estudiante_form.text_field :email %><br />
+    cédula: <%= estudiante_form.text_field :cedula %><br />
+   Lugar de nacimiento: <%= estudiante_form.text_field :lugar_nac %><br />
+
+
+
+   
+    <%= @sexos = Sexo.find(:all)
+	    estudiante_form.collection_select(:sexo_id, @sexos, :id, :descripcion ) %>
+    
+    <%= estudiante_form.date_select :fecha_nac, :default => {:year => yearago(20)}, :start_year => yearago(70), :end_year => yearago(13), :label => 'Fecha de nacimiento' %> 
+    <%= f.submit 'Enviar' %>
+<% end %>

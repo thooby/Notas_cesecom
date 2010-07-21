@@ -23,6 +23,8 @@ class EstudiantesController < ApplicationController
 
   # GET /estudiantes/new
   # GET /estudiantes/new.xml
+  def matricula
+  end
   def new
     @estudiante = Estudiante.new
 
