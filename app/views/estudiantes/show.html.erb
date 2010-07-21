@@ -8,9 +8,6 @@
   <%=h @estudiante.apellido1 %>
   <%=h @estudiante.apellido2 %>
 </p>
-
-
-
 <p>
  <b>Sexo:</b>
   <%=h @estudiante.sexo.descripcion %>
@@ -28,6 +25,6 @@
   <%=h @estudiante.email %>
 </p>
 <h2>Notas</h2>
-     <%= saca_notas(@estudiante) %>
+<%= saca_notas(@estudiante) %>
 <%= link_to 'Editar', edit_estudiante_path(@estudiante) %> |
 <%= link_to 'Hacia atrás', estudiantes_path %>
