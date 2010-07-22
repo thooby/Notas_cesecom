@@ -2,21 +2,21 @@
 
 <table>
   <tr>
-    <th><%= link_to 'Estudiante', sort_params(Credito, :estudiante_id) %></th>
-    <th><%= link_to 'Curso', sort_params(Credito, :curso_id) %></th>
+    <th><%= order @search, :by => :nombre_completo, :as => "Estudiante" %></th>
+ <th><%= order @search, :by => :curso_caract, :as => "Curso" %></th>
   </tr>
 
 <% @creditos.each do |credito| %>
   <tr>
-    <td><%=h credito.estudiante.nombre_completo %></td>
-    <td><%= credito.curso.curso_caract %></td>
+    <td><%=h credito.nombre_completo %></td>
+    <td><%= credito.curso_caract %></td>
     <td><%= link_to 'Show', credito %></td>
     <td><%= link_to 'Edit', edit_credito_path(credito) %></td>
-    <td><%= link_to 'Destroy', credito, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', credito, :confirm => '¿Está usted seguro/a?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<%= will_paginate @creditos %>
 <%= link_to 'Crear matricula', new_credito_path %>

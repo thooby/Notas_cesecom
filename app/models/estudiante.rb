@@ -3,6 +3,7 @@ class Estudiante < ActiveRecord::Base
   has_many :notas, :through => :creditos
   has_many :cursos, :through => :creditos
   belongs_to :sexo
+ 
   def nombre_completo
     self.nombre1 + " "+ self.nombre2+" "+self.apellido1+" "+self.apellido2
   end

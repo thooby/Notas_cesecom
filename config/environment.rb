@@ -39,4 +39,6 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
   config.gem "acts_as_ferret", :version => "~> 0.4.8"  
+  config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
+  config.gem 'searchlogic',:version => '~> 2.4.19'
 end

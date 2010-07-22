@@ -12110,3 +12110,18 @@ Will use remote index server which should be available at druby://localhost:9010
 Will use remote index server which should be available at druby://localhost:9010
 Will use remote index server which should be available at druby://localhost:9010
 Will use remote index server which should be available at druby://localhost:9010
+Will use remote index server which should be available at druby://localhost:9010
+Will use local index.
+Will use local index.
+Will use local index.
+Will use local index.
+Will use remote index server which should be available at druby://localhost:9010
+Will use remote index server which should be available at druby://localhost:9010
+Will use remote index server which should be available at druby://localhost:9010
+Will use remote index server which should be available at druby://localhost:9010
+using index in /Users/zubi/notas_cesecom/index/development/estudiante/20100720032040
+[estudiante] register class Estudiante with index estudiante
+[estudiante] default field list for index estudiante: [:apellido1, :apellido2, :nombre1, :nombre2]
+Will use remote index server which should be available at druby://localhost:9010
+Will use remote index server which should be available at druby://localhost:9010
+Will use remote index server which should be available at druby://localhost:9010

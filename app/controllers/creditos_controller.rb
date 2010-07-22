@@ -2,7 +2,13 @@ class CreditosController < ApplicationController
   # GET /creditos
   # GET /creditos.xml
   def index
-    @creditos = Credito.all(:order => sortable_order(Credito))
+    @search = Credito.searchlogic(params[:search])
+    @creditos = @search.all.paginate :page => params[:page], :per_page => 5
+    puts "kkkkkkkkkkkk"
+    @creditos.each  do |c|
+      puts c.id
+    end
+    puts "xxxxxxxxxxxx"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @creditos }
