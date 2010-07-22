@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :materias
   map.connect 'cursos/matricula', :controller => 'cursos', :action => 'matricula'
+  map.root :controller => 'estudiantes', :action => 'home'
   map.resources :cursos
 
   map.resources :tipo_notas

@@ -12125,3 +12125,24 @@ using index in /Users/zubi/notas_cesecom/index/development/estudiante/2010072003
 Will use remote index server which should be available at druby://localhost:9010
 Will use remote index server which should be available at druby://localhost:9010
 Will use remote index server which should be available at druby://localhost:9010
+Will use remote index server which should be available at druby://localhost:9010
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: landero~
+-->+(apellido1:landero~ apellido2:landero~ nombre1:landero~ nombre2:landero~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 1 results from AR: [#<Estudiante id: 1, nombre1: "Pedro", nombre2: "Juan", apellido1: "Landero", apellido2: "Fernandez", email: "pedro.landero@gmail.com", sexo_id: 2, cedula: "M36-4567-23", fecha_nac: "1985-07-17", lugar_nac: "Murra", created_at: "2010-07-17 02:07:30", updated_at: "2010-07-20 04:39:50">]
+Query: landero~
+total hits: 1, results delivered: 1
+index_for [Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)]
+options: {:offset=>0, :limit=>:all, :page=>nil}
+ar_options: {}
+[estudiante] stored_fields: nil
+[estudiante] query: landero~
+-->+(apellido1:landero~ apellido2:landero~ nombre1:landero~ nombre2:landero~) +(class_name:Estudiante)
+[estudiante] now retrieving records from AR with options: {}
+[estudiante] 1 results from AR: [#<Estudiante id: 1, nombre1: "Pedro", nombre2: "Juan", apellido1: "Landero", apellido2: "Fernandez", email: "pedro.landero@gmail.com", sexo_id: 2, cedula: "M36-4567-23", fecha_nac: "1985-07-17", lugar_nac: "Murra", created_at: "2010-07-17 02:07:30", updated_at: "2010-07-20 04:39:50">]
+Query: landero~
+total hits: 1, results delivered: 1

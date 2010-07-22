@@ -10,8 +10,6 @@
     <th>Sexo</th>
     <th>Cédula</th>
   </tr>
-<%  @estudiantes = @estudiantes.sort_by { |a| [a.apellido1.downcase, a.apellido2.downcase] } %>
-<%= debug(@estudiantes) %>
 <% @estudiantes.each do |estudiante| %>
   <tr>
     <td><%=h estudiante.nombre_completo %>

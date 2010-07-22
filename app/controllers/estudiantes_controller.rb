@@ -1,6 +1,8 @@
 class EstudiantesController < ApplicationController
   # GET /estudiantes
   # GET /estudiantes.xml
+  def home
+  end
   def index
     @estudiantes = Estudiante.all
 

@@ -18475,3 +18475,278 @@ Rendering creditos/index
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
   [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
 Completed in 72ms (View: 57, DB: 4) | 200 OK [http://localhost/creditos?search%5Border%5D=ascend_by_curso_caract]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:13:19) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 67ms (View: 65, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-22 20:13:23) [GET]
+  [4;36;1mEstudiante Load (1.4ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+Completed in 185ms (View: 168, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-22 20:14:45) [GET]
+  [4;36;1mEstudiante Load (1.4ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 136ms (View: 122, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:17:05) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-22 20:17:18) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"landero"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mEstudiante Load (0.5ms)[0m   [0mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('1')) [0m
+Rendering busquedas/index
+  [4;36;1mNota Load (0.7ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 1)) [0m
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;36;1mTipoNota Load (0.3ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.4ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;36;1mTipoNota Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;36;1mTipoNota Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.2ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+Completed in 290ms (View: 173, DB: 5) | 200 OK [http://localhost/busquedas?q=landero&commit=Busca%21]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:19:14) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BusquedasController#index (for 127.0.0.1 at 2010-07-22 20:19:57) [GET]
+  Parameters: {"commit"=>"Busca!", "q"=>"landero"}
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mEstudiante Load (0.4ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE (estudiantes.id in ('1')) [0m
+Rendering busquedas/index
+  [4;35;1mNota Load (0.7ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 1)) [0m
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+Completed in 148ms (View: 126, DB: 5) | 200 OK [http://localhost/busquedas?q=landero&commit=Busca%21]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:20:00) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:20:30) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:23:00) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:26:02) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:28:53) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+
+ActionView::TemplateError (undefined local variable or method `estudiante_new' for #<ActionView::Base:0x103318c98>) on line #245 of app/views/estudiantes/home.html.erb:
+242:           <ol>          
+243:             <li>
+244:               <h2>Ingrese la lista de sus estudiantes</h2>
+245:               <p><%= link_to "Crear un estudiante", estudiante_new %></p>
+246:             </li>
+247:             
+248:             <li>
+
+    app/views/estudiantes/home.html.erb:245
+
+Rendered rescues/_trace (124.1ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:33:49) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+
+ActionView::TemplateError (undefined local variable or method `new_estudiante' for #<ActionView::Base:0x10335afa8>) on line #245 of app/views/estudiantes/home.html.erb:
+242:           <ol>          
+243:             <li>
+244:               <h2>Ingrese la lista de sus estudiantes</h2>
+245:               <p><%= link_to "Crear un estudiante", new_estudiante %></p>
+246:             </li>
+247:             
+248:             <li>
+
+    app/views/estudiantes/home.html.erb:245
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:41:15) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-22 20:41:20) [GET]
+Rendering template within layouts/cursos
+Rendering cursos/new
+  [4;36;1mSexo Load (0.5ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered cursos/_estudiante (136.1ms)
+  [4;35;1mMateria Load (0.5ms)[0m   [0mSELECT * FROM "materias" [0m
+  [4;36;1mNivel Load (0.4ms)[0m   [0;1mSELECT * FROM "nivels" [0m
+  [4;35;1mDocente Load (0.5ms)[0m   [0mSELECT * FROM "docentes" [0m
+Completed in 267ms (View: 241, DB: 2) | 200 OK [http://localhost/cursos/new]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:41:33) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:44:44) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-22 20:44:47) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+  [4;36;1mEstudiante Load (1.1ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+  [4;35;1mCurso Load (0.7ms)[0m   [0mSELECT * FROM "cursos" [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 142ms (View: 131, DB: 3) | 200 OK [http://localhost/creditos/new]
+
+
+Processing CreditosController#create (for 127.0.0.1 at 2010-07-22 20:45:04) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"TnZFaAnuztqojlqb1/hHYdP+qMISwpHzvLJYKizhEO8=", "credito"=>{"curso_id"=>"4", "estudiante_id"=>"4"}}
+  [4;36;1mCredito Create (0.5ms)[0m   [0;1mINSERT INTO "creditos" ("created_at", "updated_at", "estudiante_id", "curso_id") VALUES('2010-07-22 18:45:04', '2010-07-22 18:45:04', 4, 4)[0m
+Redirected to http://localhost:3000/creditos/11
+Completed in 149ms (DB: 0) | 302 Found [http://localhost/creditos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-22 20:45:04) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 11) [0m
+Rendering template within layouts/creditos
+Rendering creditos/show
+  [4;36;1mEstudiante Load (0.4ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 4) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+Completed in 95ms (View: 83, DB: 1) | 200 OK [http://localhost/creditos/11]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-22 20:45:07) [GET]
+Rendering template within layouts/creditos
+Rendering creditos/new
+  [4;36;1mEstudiante Load (1.1ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+  [4;35;1mCurso Load (0.7ms)[0m   [0mSELECT * FROM "cursos" [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 133ms (View: 123, DB: 3) | 200 OK [http://localhost/creditos/new]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-22 20:45:08) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-22 20:45:16) [GET]
+Rendering template within layouts/cursos
+Rendering cursos/new
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendered cursos/_estudiante (20.2ms)
+  [4;35;1mMateria Load (0.6ms)[0m   [0mSELECT * FROM "materias" [0m
+  [4;36;1mNivel Load (0.4ms)[0m   [0;1mSELECT * FROM "nivels" [0m
+  [4;35;1mDocente Load (0.5ms)[0m   [0mSELECT * FROM "docentes" [0m
+Completed in 203ms (View: 93, DB: 2) | 200 OK [http://localhost/cursos/new]
