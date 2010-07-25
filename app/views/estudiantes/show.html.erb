@@ -26,8 +26,5 @@
 </p>
 <h2>Notas</h2>
 <%= saca_notas(@estudiante) %>
-@estudiante.fields_for do |builder|
-<%= render "edit_notas", :f => builder %>
-end
 <%= link_to 'Editar', edit_estudiante_path(@estudiante) %> |
 <%= link_to 'Hacia atrás', estudiantes_path %>

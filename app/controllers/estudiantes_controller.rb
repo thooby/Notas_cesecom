@@ -29,7 +29,10 @@ class EstudiantesController < ApplicationController
   end
   def new
     @estudiante = Estudiante.new
-
+    5.times do
+      nota = @estudiante.notas.build
+      1.times {nota.descripcions.build}
+    end
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @estudiante }

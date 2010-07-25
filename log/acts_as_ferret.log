@@ -12881,3 +12881,4 @@ ar_options: {}
 [estudiante] 1 results from AR: [#<Estudiante id: 3, nombre1: "Matilde", nombre2: "Lisbeth", apellido1: "Castro", apellido2: "López", email: "matilis.castro@gmail.com", sexo_id: 1, cedula: "B679-345-12", fecha_nac: "1992-07-17", lugar_nac: "Macuelizo", created_at: "2010-07-17 15:39:05", updated_at: "2010-07-20 04:41:10">]
 Query: kastr~
 total hits: 1, results delivered: 1
+Will use remote index server which should be available at druby://localhost:9010
