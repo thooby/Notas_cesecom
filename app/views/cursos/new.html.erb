@@ -1,45 +1,41 @@
-<h1>New curso</h1>
+<h1>Añadir curso</h1>
 
 <% form_for(@curso) do |f| %>
   <%= f.error_messages %>
-  <%= add_estudiante_link "Estudiante nuevo" %>
 
   <p>
-	<%=
-	    @materias = Materia.find(:all)
-	    f.collection_select(:materia_id, @materias, :id, :descripcion )
-	%>
+	<% @materias = Materia.find(:all) -%>
+	    Titulo : 
+	<%= f.collection_select(:materia_id, @materias, :id, :titulo )	%>
 	
-   
+  <p>
+	<%	@nivels = Nivel.find(:all) -%>
+	   Nivel:
+	<%= f.collection_select(:nivel_id, @nivels, :id, :descripcion )	%>
+
+  </p>  
   </p>
   <p>
-    <%= f.label :fecha_inicio %><br />
+    Fecha de inicio:
     <%= f.date_select :fecha_inicio %>
   </p>
   <p>
-    <%= f.label :fecha_finalizacion %><br />
+	Fecha de finalización:
     <%= f.date_select :fecha_finalizacion %>
   </p>
+
   <p>
-	<%=
-	    @nivels = Nivel.find(:all)
-	    f.collection_select(:nivel_id, @nivels, :id, :descripcion )
-	%>
-    
-  </p>
-  <p>
-    <%= f.label :horario %><br />
+   Horario:
     <%= f.text_field :horario %>
   </p>
   <p>
-	<%=
-	    @docentes = Docente.find(:all)
-	    f.collection_select(:docente_id, @docentes, :id, :nombre1 )
-	%>
+	<% @docentes = Docente.find(:all) %>
+	Docente encargado del curso
+	<%= f.collection_select(:docente_id, @docentes, :id, :nombre1 )	%>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Crear' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', cursos_path %>
+<%= link_to 'Hacia atrás', cursos_path %>

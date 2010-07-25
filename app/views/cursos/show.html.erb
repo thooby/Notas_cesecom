@@ -1,33 +1,35 @@
+<h2>Ficha de curso</h2>
 <p>
   <b>Materia:</b>
-  <%=h @curso.materia_id %>
-</p>
-
-<p>
-  <b>Fecha inicio:</b>
-  <%=h @curso.fecha_inicio %>
-</p>
-
-<p>
-  <b>Fecha finalizacion:</b>
-  <%=h @curso.fecha_finalizacion %>
-</p>
-
-<p>
+  <%=h @curso.materia.titulo %><br />
+  <b>Descripción:</b>
+  <%=h @curso.materia.descripcion %>
+<br />
   <b>Nivel:</b>
-  <%=h @curso.nivel_id %>
+  <%=h @curso.nivel.descripcion %>
 </p>
-
 <p>
   <b>Horario:</b>
   <%=h @curso.horario %>
 </p>
 
+
 <p>
-  <b>Docente:</b>
-  <%=h @curso.docente_id %>
+  <b>Comienzo:</b>
+  <%=h @curso.fecha_inicio %>
+
+  <b>Final</b>
+  <%=h @curso.fecha_finalizacion %>
 </p>
 
 
-<%= link_to 'Edit', edit_curso_path(@curso) %> |
-<%= link_to 'Back', cursos_path %>
+
+
+<p>
+  <b>Encargado docente:</b>
+  <%=h @curso.docente.nombre_completo %>
+</p>
+
+
+<%= link_to 'Editar', edit_curso_path(@curso) %> |
+<%= link_to 'Hacia atrás', cursos_path %>

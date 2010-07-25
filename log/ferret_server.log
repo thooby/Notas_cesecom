@@ -1663,3 +1663,291 @@ index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103354388>
 index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103354388>
 ############ registerclass Estudiante
 index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103354388>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103354388>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103354388>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103354388>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103354388>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103354388>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103354388>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103354388>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "lisbets~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "lisbes~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "eriberto~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "eriverto~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "landero~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "eriberto~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "jose~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x1037542a8>
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "josef~~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+exit
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "jose~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "jose~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "landr~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "jime~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "jimen~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "ximen~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "ximens~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "ximenes~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+#method_missing(:find_ids, [:estudiante, "kastr~", {:offset=>0, :page=>nil, :models=>[Estudiante(id: integer, nombre1: string, nombre2: string, apellido1: string, apellido2: string, email: string, sexo_id: integer, cedula: string, fecha_nac: date, lugar_nac: string, created_at: datetime, updated_at: datetime)], :limit=>:all}])
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
+############ registerclass Estudiante
+index for class Estudiante: #<ActsAsFerret::LocalIndex:0x103749380>
