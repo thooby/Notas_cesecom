@@ -27147,3 +27147,64 @@ Processing NotasController#index (for 127.0.0.1 at 2010-07-25 08:14:32) [GET]
 Rendering template within layouts/notas
 Rendering notas/index
 Completed in 34ms (View: 26, DB: 1) | 200 OK [http://localhost/notas]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-26 07:53:19) [GET]
+Rendering template within layouts/estudiantes
+Rendering estudiantes/home
+Completed in 241ms (View: 239, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-26 07:53:22) [GET]
+  [4;36;1mEstudiante Load (40.0ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/estudiantes
+Rendering estudiantes/index
+  [4;35;1mSexo Load (1.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 316ms (View: 96, DB: 42) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-26 07:57:16) [GET]
+  [4;36;1mEstudiante Load (32.6ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (2.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 464ms (View: 294, DB: 35) | 200 OK [http://localhost/estudiantes]
+
+
+Processing NivelsController#index (for 127.0.0.1 at 2010-07-26 07:59:22) [GET]
+  [4;36;1mNivel Load (2.2ms)[0m   [0;1mSELECT * FROM "nivels" [0m
+Rendering template within layouts/application
+Rendering nivels/index
+Completed in 197ms (View: 166, DB: 2) | 200 OK [http://localhost/nivels]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-26 07:59:28) [GET]
+  [4;35;1mEstudiante Load (27.2ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;36;1mSexo Load (1.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 325ms (View: 112, DB: 29) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-26 07:59:33) [GET]
+Rendering template within layouts/application
+Rendering estudiantes/home
+Completed in 88ms (View: 86, DB: 0) | 200 OK [http://localhost/]
