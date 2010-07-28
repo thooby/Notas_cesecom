@@ -1,0 +1,19 @@
+<% form_for(@estudiante) do |f| -%> 
+  <h2><%= @estudiante.nombre1+" " +@estudiante.nombre2+" "+ @estudiante.apellido1+" "+@estudiante.apellido2 %></h2>
+  <% i=0 %>
+  <% n_curso =""%>
+    <div class="campos"><% f.fields_for :notas do |builder| %>
+      <% x = eval("@estudiante.notas[" + i.to_s + "].credito.curso.materia.titulo") +
+             "  ("+eval("@estudiante.notas[" + i.to_s + "].credito.curso.nivel.descripcion") +
+             ")" %>
+      <% unless x==n_curso then -%>
+        <strong><%= x -%></strong>
+        <% n_curso = x -%><br />
+      <% end %>
+      ( <%= eval("@estudiante.notas[" + i.to_s + "].tipo_nota.descripcion") %> evaluación )
+      <% i += 1%>
+	  <%= render 'estu_notas', :f => builder %> 
+	  <span class="salto"></span>   
+	<% end %></div>
+    <%= f.submit 'Enviar' %>
+<% end %>
