@@ -1,10 +1,22 @@
 ActionController::Routing::Routes.draw do |map|
-  map.signup 'signup', :controller => 'users', :action => 'new'
-  map.logout 'logout', :controller => 'sessions', :action => 'destroy'
-  map.login 'login', :controller => 'sessions', :action => 'new'
-  map.resources :sessions
+  map.resources :sexos
 
-  map.resources :users
+  map.resources :nivels
+
+  map.resources :materias
+  map.connect 'cursos/matricula', :controller => 'cursos', :action => 'matricula'
+  map.root :controller => 'estudiantes', :action => 'home'
+  map.resources :cursos
+
+  map.resources :tipo_notas
+
+  map.resources :notas
+
+  map.resources :creditos
+
+  map.resources :docentes
+  map.resources :estudiantes
+  #map.resources :busquedas
 
   # The priority is based upon order of creation: first created -> highest priority.
 
