@@ -1,4 +1,5 @@
 class TipoNotasController < ApplicationController
+ before_filter :login_required, :except => [:index, :show]
   # GET /tipo_notas
   # GET /tipo_notas.xml
   def index

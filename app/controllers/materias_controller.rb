@@ -1,6 +1,7 @@
 class MateriasController < ApplicationController
   # GET /materias
   # GET /materias.xml
+ before_filter :login_required, :except => [:index, :show]
   def index
     @materias = Materia.all
 

@@ -1,4 +1,5 @@
 class EstudiantesController < ApplicationController
+ before_filter :login_required, :except => [:index, :show, :home]
   # GET /estudiantes
   # GET /estudiantes.xml
   def home
@@ -31,7 +32,6 @@ class EstudiantesController < ApplicationController
     @estudiante = Estudiante.new
     5.times do
       nota = @estudiante.notas.build
-      1.times {nota.descripcions.build}
     end
     respond_to do |format|
       format.html # new.html.erb

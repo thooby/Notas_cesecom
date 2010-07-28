@@ -1,4 +1,5 @@
 class BusquedasController < ApplicationController
+ before_filter :login_required
   def busca
   end
   def index

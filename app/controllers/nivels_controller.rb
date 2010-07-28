@@ -1,4 +1,5 @@
 class NivelsController < ApplicationController
+ before_filter :login_required, :except => [:index, :show]
   # GET /nivels
   # GET /nivels.xml
   def index

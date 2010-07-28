@@ -27245,3 +27245,1757 @@ Migrating to CreateUsers (20100728005538)
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sexos")[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("tipo_notas")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:02:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (2.2ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 2467ms (View: 300, DB: 3) | 200 OK [http://localhost/estudiantes]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 03:02:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-28 03:02:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-28 03:03:12) [POST]
+  Parameters: {"commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"TquxaLSFKh+sUPVkh2sEPdX+yHe2GXVQjP24SBx8hJw=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"thooby", "password"=>"[FILTERED]", "email"=>"juan@zubi.net"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'thooby') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'juan@zubi.net') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "password_salt", "password_hash", "email") VALUES('2010-07-28 01:03:12', '2010-07-28 01:03:12', 'thooby', '0f71addd119c52bec073a238bd70a21c913b9ee1', '289e21f4e786e3dcff861b1c35bf7ae8c9f05097', 'juan@zubi.net')[0m
+Redirected to http://localhost:3000/
+Completed in 157ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:48:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (2.0ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 257ms (View: 189, DB: 3) | 200 OK [http://localhost/estudiantes]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-07-28 03:48:30) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:48:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (1.4ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.2ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 123ms (View: 33, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-28 03:48:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"estudiantes"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/estudiantes/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 03:48:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 37ms (View: 34, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:48:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (1.5ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 51ms (View: 36, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-28 03:48:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering estudiantes/show
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mNota Load (0.5ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 4)) [0m
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 6) [0m
+  [4;35;1mTipoNota Load (0.3ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.4ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 338ms (View: 243, DB: 3) | 200 OK [http://localhost/estudiantes/4]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:49:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (1.4ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 48ms (View: 34, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#edit (for 127.0.0.1 at 2010-07-28 03:49:05) [GET]
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"estudiantes"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/estudiantes/4/edit]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 03:49:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:49:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (1.5ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 124ms (View: 34, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#destroy (for 127.0.0.1 at 2010-07-28 03:49:14) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"TquxaLSFKh+sUPVkh2sEPdX+yHe2GXVQjP24SBx8hJw=", "id"=>"4", "controller"=>"estudiantes"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/estudiantes/4]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 03:49:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-28 03:49:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-28 03:51:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/signup]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 03:51:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-28 03:51:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/signup]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 03:51:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:52:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (1.5ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 381ms (View: 159, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-28 03:52:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/signup]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 03:52:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 32ms (View: 30, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:52:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (1.4ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.2ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+Completed in 216ms (View: 118, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 03:53:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-28 03:53:20) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"TquxaLSFKh+sUPVkh2sEPdX+yHe2GXVQjP24SBx8hJw=", "controller"=>"sessions", "login"=>"thooby", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'thooby') LIMIT 1[0m
+Redirected to http://localhost:3000/signup
+Completed in 329ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-28 03:53:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 60ms (View: 50, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing SexosController#index (for 127.0.0.1 at 2010-07-28 03:53:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"sexos"}
+  [4;36;1mSexo Load (0.7ms)[0m   [0;1mSELECT * FROM "sexos" [0m
+Rendering template within layouts/application
+Rendering sexos/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 103ms (View: 95, DB: 1) | 200 OK [http://localhost/sexos]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:54:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (1.5ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 220ms (View: 174, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-28 03:54:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering estudiantes/show
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mNota Load (0.4ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 3)) [0m
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 7) [0m
+  [4;35;1mTipoNota Load (11.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.4ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 192ms (View: 148, DB: 13) | 200 OK [http://localhost/estudiantes/3]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:55:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (2.0ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.4ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 138ms (View: 42, DB: 3) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-28 03:55:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering estudiantes/show
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mNota Load (0.3ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 5)) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 138ms (View: 29, DB: 1) | 200 OK [http://localhost/estudiantes/5]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:55:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (1.5ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 139ms (View: 122, DB: 3) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:55:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (1.5ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 22068ms (View: 40, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing NotasController#index (for 127.0.0.1 at 2010-07-28 03:55:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"notas"}
+  [4;35;1mNota Load (1.8ms)[0m   [0mSELECT * FROM "notas" [0m
+Rendering template within layouts/application
+Rendering notas/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 269ms (View: 160, DB: 2) | 200 OK [http://localhost/notas]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:56:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (1.6ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 121ms (View: 59, DB: 3) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#edit (for 127.0.0.1 at 2010-07-28 03:57:56) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"estudiantes"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering estudiantes/edit
+  [4;36;1mNota Load (0.5ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 3)) [0m
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 7) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.3ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+Rendered estudiantes/_estu_notas (43.8ms)
+Rendered estudiantes/_form (166.9ms)
+Completed in 382ms (View: 236, DB: 3) | 200 OK [http://localhost/estudiantes/3/edit]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:58:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (1.4ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 57ms (View: 41, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#edit (for 127.0.0.1 at 2010-07-28 03:58:08) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"estudiantes"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mEstudiante Load (0.4ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering estudiantes/edit
+  [4;35;1mNota Load (0.8ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 1)) [0m
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mTipoNota Load (0.3ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+Rendered estudiantes/_estu_notas (0.7ms)
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 2) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+Rendered estudiantes/_estu_notas (0.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mTipoNota Load (0.3ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 2) [0m
+Rendered estudiantes/_estu_notas (0.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 3) [0m
+Rendered estudiantes/_estu_notas (0.6ms)
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 4) [0m
+  [4;35;1mCurso Load (0.2ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+Rendered estudiantes/_estu_notas (0.6ms)
+Rendered estudiantes/_form (144.1ms)
+Completed in 168ms (View: 145, DB: 5) | 200 OK [http://localhost/estudiantes/1/edit]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:58:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (1.4ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 145ms (View: 131, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-28 03:58:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (0.3ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering estudiantes/show
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mNota Load (0.3ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 5)) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 43ms (View: 27, DB: 1) | 200 OK [http://localhost/estudiantes/5]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:58:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (1.4ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.2ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 54ms (View: 40, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-28 03:58:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering estudiantes/show
+  [4;36;1mSexo Load (0.2ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mNota Load (0.3ms)[0m   [0mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 7)) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 124ms (View: 109, DB: 1) | 200 OK [http://localhost/estudiantes/7]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:58:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (1.4ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 54ms (View: 39, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-28 03:58:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (0.3ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering estudiantes/show
+  [4;35;1mSexo Load (0.2ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mNota Load (0.5ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 2)) [0m
+  [4;35;1mCredito Load (0.2ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 3) [0m
+  [4;36;1mTipoNota Load (0.3ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.3ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;36;1mCredito Load (0.2ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 160ms (View: 55, DB: 3) | 200 OK [http://localhost/estudiantes/2]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 03:58:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (1.4ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.2ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 137ms (View: 39, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#edit (for 127.0.0.1 at 2010-07-28 04:01:34) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"estudiantes"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering estudiantes/edit
+  [4;36;1mNota Load (0.7ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 1)) [0m
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.2ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+Rendered estudiantes/_estu_notas (1.2ms)
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 2) [0m
+  [4;35;1mCurso Load (0.2ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+Rendered estudiantes/_estu_notas (0.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mTipoNota Load (0.3ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 2) [0m
+Rendered estudiantes/_estu_notas (0.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mTipoNota Load (0.2ms)[0m   [0;1mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 3) [0m
+Rendered estudiantes/_estu_notas (0.6ms)
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 4) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tipo_notas" WHERE ("tipo_notas"."id" = 1) [0m
+Rendered estudiantes/_estu_notas (0.6ms)
+Rendered estudiantes/_form (151.3ms)
+Completed in 222ms (View: 170, DB: 5) | 200 OK [http://localhost/estudiantes/1/edit]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 04:01:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (1.4ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 145ms (View: 45, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-28 04:01:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"estudiantes"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+NoMethodError (undefined method `descripcions' for #<Nota:0x103134260>):
+  app/controllers/estudiantes_controller.rb:35:in `new'
+  app/controllers/estudiantes_controller.rb:35:in `times'
+  app/controllers/estudiantes_controller.rb:35:in `new'
+  app/controllers/estudiantes_controller.rb:33:in `times'
+  app/controllers/estudiantes_controller.rb:33:in `new'
+
+Rendered rescues/_trace (119.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-28 04:13:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"estudiantes"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+NoMethodError (undefined method `descripcions' for #<Nota:0x1030d3f00>):
+  app/controllers/estudiantes_controller.rb:35:in `new'
+  app/controllers/estudiantes_controller.rb:35:in `times'
+  app/controllers/estudiantes_controller.rb:35:in `new'
+  app/controllers/estudiantes_controller.rb:33:in `times'
+  app/controllers/estudiantes_controller.rb:33:in `new'
+
+Rendered rescues/_trace (114.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 04:13:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;35;1mEstudiante Load (1.6ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 82ms (View: 66, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-28 04:13:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"estudiantes"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+NoMethodError (undefined method `descripcions' for #<Nota:0x1035b9088>):
+  app/controllers/estudiantes_controller.rb:35:in `new'
+  app/controllers/estudiantes_controller.rb:35:in `times'
+  app/controllers/estudiantes_controller.rb:35:in `new'
+  app/controllers/estudiantes_controller.rb:33:in `times'
+  app/controllers/estudiantes_controller.rb:33:in `new'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-28 04:13:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"estudiantes"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+NoMethodError (undefined method `descripcions' for #<Nota:0x1036e0cb8>):
+  app/controllers/estudiantes_controller.rb:35:in `new'
+  app/controllers/estudiantes_controller.rb:35:in `times'
+  app/controllers/estudiantes_controller.rb:35:in `new'
+  app/controllers/estudiantes_controller.rb:33:in `times'
+  app/controllers/estudiantes_controller.rb:33:in `new'
+
+Rendered rescues/_trace (34.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-28 04:14:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"estudiantes"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+NoMethodError (undefined method `descripcions' for #<Nota:0x1037b88c0>):
+  app/controllers/estudiantes_controller.rb:35:in `new'
+  app/controllers/estudiantes_controller.rb:35:in `times'
+  app/controllers/estudiantes_controller.rb:35:in `new'
+  app/controllers/estudiantes_controller.rb:33:in `times'
+  app/controllers/estudiantes_controller.rb:33:in `new'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-28 04:16:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"estudiantes"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering estudiantes/new
+ERROR: compiling _run_erb_app47views47estudiantes47_form546html46erb_locals_form5_object RAISED compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/_form5.html.erb:10: syntax error, unexpected '\n', expecting tASSOC
+Function body:           def _run_erb_app47views47estudiantes47_form546html46erb_locals_form5_object(local_assigns)
+            old_output_buffer = output_buffer;form5 = local_assigns[:form5];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  error_handling_form_for(@estudiante) do |f| ; @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.text_field :nombre1, :label => 'Primer nombre' ).to_s); @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.text_field :nombre2, :label => 'Segundo nombre' ).to_s); @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.text_field :apellido1,  :label => 'Primer apellido' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :apellido2,:label => 'Segundo apellido' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :email, :label => 'e-mail' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( @sexos = Sexo.find(:all)
+            f.collection_select(:sexo_id, @sexos, :id, :descripcion ) ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :cedula, :label => 'Cédula' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.date_select :fecha_nac, :default => {:year => yearago(20)}, :start_year => yearago(70), :end_year => yearago(13), :l
+    <%= f.text_field :lugar_nac, :label => 'Lugar de nacimiento').to_s); @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.submit 'Enviar' ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zubi/notas_cesecom/app/views/estudiantes/_form5.html.erb:17:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+/Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:2:in `_run_erb_app47views47estudiantes47new46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/zubi/notas_cesecom/app/controllers/estudiantes_controller.rb:36:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/_form5.html.erb:10: syntax error, unexpected '\n', expecting tASSOC) on line #10 of app/views/estudiantes/_form5.html.erb:
+7:     <%= @sexos = Sexo.find(:all)
+8:             f.collection_select(:sexo_id, @sexos, :id, :descripcion ) %>
+9:     <%= f.text_field :cedula, :label => 'Cédula' %>
+10:     <%= f.date_select :fecha_nac, :default => {:year => yearago(20)}, :start_year => yearago(70), :end_year => yearago(13), :l
+11:     <%= f.text_field :lugar_nac, :label => 'Lugar de nacimiento'%> 
+12:     <%= f.submit 'Enviar' %>
+13: <% end %>
+
+    app/views/estudiantes/_form5.html.erb:17:in `compile!'
+    app/views/estudiantes/new.html.erb:2
+    app/controllers/estudiantes_controller.rb:36:in `new'
+
+Rendered rescues/_trace (53.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-28 04:18:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"estudiantes"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering estudiantes/new
+ERROR: compiling _run_erb_app47views47estudiantes47_form546html46erb_locals_form5_object RAISED compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/_form5.html.erb:10: syntax error, unexpected '}', expecting ')'
+Function body:           def _run_erb_app47views47estudiantes47_form546html46erb_locals_form5_object(local_assigns)
+            old_output_buffer = output_buffer;form5 = local_assigns[:form5];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  error_handling_form_for(@estudiante) do |f| ; @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.text_field :nombre1, :label => 'Primer nombre' ).to_s); @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.text_field :nombre2, :label => 'Segundo nombre' ).to_s); @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.text_field :apellido1,  :label => 'Primer apellido' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :apellido2,:label => 'Segundo apellido' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :email, :label => 'e-mail' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( @sexos = Sexo.find(:all)
+            f.collection_select(:sexo_id, @sexos, :id, :descripcion ) ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :cedula, :label => 'Cédula' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.date_select :fecha_nac, :default => {:year => yearago(20)}, :start_year => yearago(70), :end_year => yearago(13)}
+    <%= f.text_field :lugar_nac, :label => 'Lugar de nacimiento').to_s); @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.submit 'Enviar' ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zubi/notas_cesecom/app/views/estudiantes/_form5.html.erb:17:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+/Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:2:in `_run_erb_app47views47estudiantes47new46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/zubi/notas_cesecom/app/controllers/estudiantes_controller.rb:36:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/_form5.html.erb:10: syntax error, unexpected '}', expecting ')') on line #10 of app/views/estudiantes/_form5.html.erb:
+7:     <%= @sexos = Sexo.find(:all)
+8:             f.collection_select(:sexo_id, @sexos, :id, :descripcion ) %>
+9:     <%= f.text_field :cedula, :label => 'Cédula' %>
+10:     <%= f.date_select :fecha_nac, :default => {:year => yearago(20)}, :start_year => yearago(70), :end_year => yearago(13)}
+11:     <%= f.text_field :lugar_nac, :label => 'Lugar de nacimiento'%> 
+12:     <%= f.submit 'Enviar' %>
+13: <% end %>
+
+    app/views/estudiantes/_form5.html.erb:17:in `compile!'
+    app/views/estudiantes/new.html.erb:2
+    app/controllers/estudiantes_controller.rb:36:in `new'
+
+Rendered rescues/_trace (53.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-28 04:19:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"estudiantes"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering estudiantes/new
+ERROR: compiling _run_erb_app47views47estudiantes47_form546html46erb_locals_form5_object RAISED compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/_form5.html.erb:10: syntax error, unexpected '}', expecting ')'
+...70), :end_year => yearago(13)} ).to_s); @output_buffer.conca...
+                              ^
+Function body:           def _run_erb_app47views47estudiantes47_form546html46erb_locals_form5_object(local_assigns)
+            old_output_buffer = output_buffer;form5 = local_assigns[:form5];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  error_handling_form_for(@estudiante) do |f| ; @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.text_field :nombre1, :label => 'Primer nombre' ).to_s); @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.text_field :nombre2, :label => 'Segundo nombre' ).to_s); @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.text_field :apellido1,  :label => 'Primer apellido' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :apellido2,:label => 'Segundo apellido' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :email, :label => 'e-mail' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( @sexos = Sexo.find(:all)
+            f.collection_select(:sexo_id, @sexos, :id, :descripcion ) ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :cedula, :label => 'Cédula' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.date_select :fecha_nac, :default => {:year => yearago(20)}, :start_year => yearago(70), :end_year => yearago(13)} ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :lugar_nac, :label => 'Lugar de nacimiento').to_s); @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.submit 'Enviar' ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/zubi/notas_cesecom/app/views/estudiantes/_form5.html.erb:17:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+/Users/zubi/notas_cesecom/app/views/estudiantes/new.html.erb:2:in `_run_erb_app47views47estudiantes47new46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/zubi/notas_cesecom/app/controllers/estudiantes_controller.rb:36:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/zubi/notas_cesecom/app/views/estudiantes/_form5.html.erb:10: syntax error, unexpected '}', expecting ')'
+...70), :end_year => yearago(13)} ).to_s); @output_buffer.conca...
+                              ^) on line #10 of app/views/estudiantes/_form5.html.erb:
+7:     <%= @sexos = Sexo.find(:all)
+8:             f.collection_select(:sexo_id, @sexos, :id, :descripcion ) %>
+9:     <%= f.text_field :cedula, :label => 'Cédula' %>
+10:     <%= f.date_select :fecha_nac, :default => {:year => yearago(20)}, :start_year => yearago(70), :end_year => yearago(13)} %>
+11:     <%= f.text_field :lugar_nac, :label => 'Lugar de nacimiento'%> 
+12:     <%= f.submit 'Enviar' %>
+13: <% end %>
+
+    app/views/estudiantes/_form5.html.erb:17:in `compile!'
+    app/views/estudiantes/new.html.erb:2
+    app/controllers/estudiantes_controller.rb:36:in `new'
+
+Rendered rescues/_trace (53.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EstudiantesController#new (for 127.0.0.1 at 2010-07-28 04:20:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"estudiantes"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering estudiantes/new
+Rendered forms/_field (1.4ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+  [4;35;1mSexo Load (0.4ms)[0m   [0mSELECT * FROM "sexos" [0m
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.1ms)
+Rendered forms/_field (0.2ms)
+Rendered forms/_field (0.1ms)
+Rendered estudiantes/_form5 (206.3ms)
+Completed in 243ms (View: 213, DB: 1) | 200 OK [http://localhost/estudiantes/new]
+
+
+Processing EstudiantesController#create (for 127.0.0.1 at 2010-07-28 04:21:06) [POST]
+  Parameters: {"estudiante"=>{"nombre2"=>"Javier", "cedula"=>"M34-4565-23", "lugar_nac"=>"Ocotal", "fecha_nac(1i)"=>"1976", "fecha_nac(2i)"=>"7", "sexo_id"=>"2", "fecha_nac(3i)"=>"28", "apellido1"=>"Cabrera", "apellido2"=>"Landero", "email"=>"landero@gmail.com", "nombre1"=>"Manuel"}, "commit"=>"Enviar", "action"=>"create", "authenticity_token"=>"TquxaLSFKh+sUPVkh2sEPdX+yHe2GXVQjP24SBx8hJw=", "controller"=>"estudiantes"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mEstudiante Create (15.5ms)[0m   [0mINSERT INTO "estudiantes" ("nombre2", "cedula", "fecha_nac", "created_at", "updated_at", "lugar_nac", "sexo_id", "apellido1", "apellido2", "nombre1", "email") VALUES('Javier', 'M34-4565-23', '1976-07-28', '2010-07-28 02:21:06', '2010-07-28 02:21:06', 'Ocotal', 2, 'Cabrera', 'Landero', 'Manuel', 'landero@gmail.com')[0m
+ferret_create/update: Estudiante-8
+creating doc for class: Estudiante-8
+Adding field nombre1 with value 'Manuel' to index
+Adding field nombre2 with value 'Javier' to index
+Adding field apellido1 with value 'Cabrera' to index
+Adding field apellido2 with value 'Landero' to index
+Redirected to http://localhost:3000/estudiantes/8
+Completed in 503ms (DB: 16) | 302 Found [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-28 04:21:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (0.3ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering estudiantes/show
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mNota Load (0.3ms)[0m   [0;1mSELECT "notas".* FROM "notas" INNER JOIN "creditos" ON "notas".credito_id = "creditos".id WHERE (("creditos".estudiante_id = 8)) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 125ms (View: 110, DB: 1) | 200 OK [http://localhost/estudiantes/8]
+
+
+Processing EstudiantesController#show (for 127.0.0.1 at 2010-07-28 04:21:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"creditos", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (0.1ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Estudiante with ID=creditos):
+  app/controllers/estudiantes_controller.rb:19:in `show'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CreditosController#index (for 127.0.0.1 at 2010-07-28 04:21:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"creditos"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCredito Load (1.1ms)[0m   [0;1mSELECT * FROM "creditos" [0m
+Rendering template within layouts/application
+Rendering creditos/index
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.3ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+Completed in 249ms (View: 129, DB: 5) | 200 OK [http://localhost/creditos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-28 04:21:51) [GET]
+
+ActionController::RoutingError (No route matches "/matricula" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-28 04:21:59) [GET]
+
+ActionController::RoutingError (No route matches "/personas/matricula" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-28 04:22:04) [GET]
+
+ActionController::RoutingError (No route matches "/personas/matriculas" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CreditosController#index (for 127.0.0.1 at 2010-07-28 04:22:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"creditos"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCredito Load (0.9ms)[0m   [0;1mSELECT * FROM "creditos" [0m
+Rendering template within layouts/application
+Rendering creditos/index
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+  [4;36;1mCurso Load (0.4ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mEstudiante Load (0.3ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+  [4;36;1mCurso Load (0.2ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+Completed in 163ms (View: 145, DB: 4) | 200 OK [http://localhost/creditos]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-28 04:22:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"creditos"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering creditos/new
+  [4;36;1mEstudiante Load (1.2ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+  [4;35;1mCurso Load (0.9ms)[0m   [0mSELECT * FROM "cursos" [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.3ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 231ms (View: 215, DB: 3) | 200 OK [http://localhost/creditos/new]
+
+
+Processing CreditosController#create (for 127.0.0.1 at 2010-07-28 04:22:32) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"TquxaLSFKh+sUPVkh2sEPdX+yHe2GXVQjP24SBx8hJw=", "credito"=>{"curso_id"=>"1", "estudiante_id"=>"8"}, "controller"=>"creditos"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCredito Create (0.4ms)[0m   [0mINSERT INTO "creditos" ("created_at", "updated_at", "estudiante_id", "curso_id") VALUES('2010-07-28 02:22:32', '2010-07-28 02:22:32', 8, 1)[0m
+Redirected to http://localhost:3000/creditos/14
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/creditos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-28 04:22:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"14", "controller"=>"creditos"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering creditos/show
+  [4;36;1mEstudiante Load (0.4ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 8) [0m
+  [4;35;1mCurso Load (0.4ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 166ms (View: 148, DB: 2) | 200 OK [http://localhost/creditos/14]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-28 04:22:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"cursos"}
+  [4;36;1mCurso Load (1.3ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+Rendering template within layouts/application
+Rendering cursos/index
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 114ms (View: 103, DB: 3) | 200 OK [http://localhost/cursos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-28 04:23:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"14", "controller"=>"creditos"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering creditos/show
+  [4;36;1mEstudiante Load (0.4ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 8) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 48ms (View: 34, DB: 2) | 200 OK [http://localhost/creditos/14]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-28 04:23:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"cursos"}
+  [4;36;1mCurso Load (1.2ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+Rendering template within layouts/application
+Rendering cursos/index
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 129ms (View: 118, DB: 2) | 200 OK [http://localhost/cursos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-28 04:23:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"14", "controller"=>"creditos"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCredito Load (0.4ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering creditos/show
+  [4;36;1mEstudiante Load (0.4ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 8) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 50ms (View: 35, DB: 2) | 200 OK [http://localhost/creditos/14]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-28 04:23:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"cursos"}
+  [4;36;1mCurso Load (1.2ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+Rendering template within layouts/application
+Rendering cursos/index
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 134ms (View: 36, DB: 2) | 200 OK [http://localhost/cursos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-28 04:23:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"14", "controller"=>"creditos"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCredito Load (0.3ms)[0m   [0mSELECT * FROM "creditos" WHERE ("creditos"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering creditos/show
+  [4;36;1mEstudiante Load (0.4ms)[0m   [0;1mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 8) [0m
+  [4;35;1mCurso Load (0.3ms)[0m   [0mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 48ms (View: 34, DB: 2) | 200 OK [http://localhost/creditos/14]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-28 04:28:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"creditos"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering creditos/new
+  [4;35;1mEstudiante Load (1.4ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+  [4;36;1mCurso Load (0.8ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 66ms (View: 50, DB: 4) | 200 OK [http://localhost/creditos/new]
+
+
+Processing CreditosController#index (for 127.0.0.1 at 2010-07-28 04:28:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"creditos"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCredito Load (1.1ms)[0m   [0;1mSELECT * FROM "creditos" [0m
+Rendering template within layouts/application
+Rendering creditos/index
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 1) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.4ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+  [4;36;1mCurso Load (0.5ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 3) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 1) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 5) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 2) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+Completed in 85ms (View: 66, DB: 5) | 200 OK [http://localhost/creditos]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-28 04:28:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"creditos"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering creditos/new
+  [4;36;1mEstudiante Load (1.2ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+  [4;35;1mCurso Load (0.8ms)[0m   [0mSELECT * FROM "cursos" [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mNivel Load (0.2ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;36;1mMateria Load (0.2ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 145ms (View: 129, DB: 3) | 200 OK [http://localhost/creditos/new]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-28 04:33:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"creditos"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering creditos/new
+  [4;35;1mEstudiante Load (1.3ms)[0m   [0mSELECT * FROM "estudiantes" [0m
+  [4;36;1mCurso Load (0.9ms)[0m   [0;1mSELECT * FROM "cursos" [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mNivel Load (0.3ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+  [4;35;1mMateria Load (0.3ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 1) [0m
+Completed in 145ms (View: 129, DB: 4) | 200 OK [http://localhost/creditos/new]
+
+
+Processing CreditosController#create (for 127.0.0.1 at 2010-07-28 04:33:26) [POST]
+  Parameters: {"commit"=>"Matricular", "action"=>"create", "authenticity_token"=>"TquxaLSFKh+sUPVkh2sEPdX+yHe2GXVQjP24SBx8hJw=", "credito"=>{"curso_id"=>"4", "estudiante_id"=>"6"}, "controller"=>"creditos"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCredito Create (57.0ms)[0m   [0;1mINSERT INTO "creditos" ("created_at", "updated_at", "estudiante_id", "curso_id") VALUES('2010-07-28 02:33:26', '2010-07-28 02:33:26', 6, 4)[0m
+Redirected to http://localhost:3000/creditos/15
+Completed in 78ms (DB: 57) | 302 Found [http://localhost/creditos]
+
+
+Processing CreditosController#show (for 127.0.0.1 at 2010-07-28 04:33:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"creditos"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCredito Load (0.3ms)[0m   [0;1mSELECT * FROM "creditos" WHERE ("creditos"."id" = 15) [0m
+Rendering template within layouts/application
+Rendering creditos/show
+  [4;35;1mEstudiante Load (0.4ms)[0m   [0mSELECT * FROM "estudiantes" WHERE ("estudiantes"."id" = 6) [0m
+  [4;36;1mCurso Load (0.3ms)[0m   [0;1mSELECT * FROM "cursos" WHERE ("cursos"."id" = 4) [0m
+  [4;35;1mMateria Load (0.2ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mNivel Load (0.2ms)[0m   [0;1mSELECT * FROM "nivels" WHERE ("nivels"."id" = 2) [0m
+Completed in 139ms (View: 35, DB: 2) | 200 OK [http://localhost/creditos/15]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-28 05:09:59) [GET]
+  Parameters: {"action"=>"home", "controller"=>"estudiantes"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering estudiantes/home
+Completed in 118ms (View: 109, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-07-28 05:10:14) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-28 05:10:14) [GET]
+  Parameters: {"action"=>"home", "controller"=>"estudiantes"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 05:10:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 56ms (View: 54, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 05:10:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-28 05:10:27) [GET]
+  Parameters: {"action"=>"home", "controller"=>"estudiantes"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 05:10:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-28 05:12:09) [GET]
+  Parameters: {"action"=>"home", "controller"=>"estudiantes"}
+Rendering template within layouts/application
+Rendering estudiantes/home
+Completed in 98ms (View: 96, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 05:12:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (1.7ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+Completed in 156ms (View: 46, DB: 2) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-28 05:12:20) [GET]
+  Parameters: {"action"=>"home", "controller"=>"estudiantes"}
+Rendering template within layouts/application
+Rendering estudiantes/home
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-28 05:12:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"cursos"}
+  [4;35;1mCurso Load (1.5ms)[0m   [0mSELECT * FROM "cursos" [0m
+Rendering template within layouts/application
+Rendering cursos/index
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mMateria Load (0.4ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+Completed in 216ms (View: 123, DB: 2) | 200 OK [http://localhost/cursos]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-28 05:12:26) [GET]
+  Parameters: {"action"=>"home", "controller"=>"estudiantes"}
+Rendering template within layouts/application
+Rendering estudiantes/home
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-28 05:12:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"cursos"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/cursos/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 05:12:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 67ms (View: 64, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-28 05:12:32) [GET]
+  Parameters: {"action"=>"home", "controller"=>"estudiantes"}
+Rendering template within layouts/application
+Rendering estudiantes/home
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CursosController#new (for 127.0.0.1 at 2010-07-28 05:12:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"cursos"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/cursos/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 05:12:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-28 05:12:37) [GET]
+  Parameters: {"action"=>"home", "controller"=>"estudiantes"}
+Rendering template within layouts/application
+Rendering estudiantes/home
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CreditosController#new (for 127.0.0.1 at 2010-07-28 05:12:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"creditos"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/creditos/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 05:12:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-28 05:12:43) [GET]
+  Parameters: {"action"=>"home", "controller"=>"estudiantes"}
+Rendering template within layouts/application
+Rendering estudiantes/home
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EstudiantesController#index (for 127.0.0.1 at 2010-07-28 05:12:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"estudiantes"}
+  [4;36;1mEstudiante Load (2.0ms)[0m   [0;1mSELECT * FROM "estudiantes" [0m
+Rendering template within layouts/application
+Rendering estudiantes/index
+  [4;35;1mSexo Load (0.3ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mSexo Load (0.3ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sexos" WHERE ("sexos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sexos" WHERE ("sexos"."id" = 2) [0m
+Completed in 206ms (View: 123, DB: 3) | 200 OK [http://localhost/estudiantes]
+
+
+Processing EstudiantesController#home (for 127.0.0.1 at 2010-07-28 05:12:52) [GET]
+  Parameters: {"action"=>"home", "controller"=>"estudiantes"}
+Rendering template within layouts/application
+Rendering estudiantes/home
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CursosController#index (for 127.0.0.1 at 2010-07-28 05:12:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"cursos"}
+  [4;35;1mCurso Load (1.3ms)[0m   [0mSELECT * FROM "cursos" [0m
+Rendering template within layouts/application
+Rendering cursos/index
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 2) [0m
+  [4;36;1mMateria Load (0.3ms)[0m   [0;1mSELECT * FROM "materias" WHERE ("materias"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "materias" WHERE ("materias"."id" = 1) [0m
+Completed in 40ms (View: 30, DB: 2) | 200 OK [http://localhost/cursos]

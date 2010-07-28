@@ -1,4 +1,5 @@
 class SexosController < ApplicationController
+ before_filter :login_required, :except => [:index, :show]
   # GET /sexos
   # GET /sexos.xml
   def index
