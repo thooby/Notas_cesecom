@@ -1,0 +1,20 @@
+<% form_for(@curso) do |f1| -%> 
+  <h2><%= @curso.materia.titulo + " " + @curso.nivel.descripcion %></h2>
+  <% i=0 %>
+  <% f1.fields_for :notas do |f4| %>
+
+    <% f4.fields_for :credito do |f2| -%>
+      %= @curso.estud(i) %>
+      <div class="fields">	  
+      <% i += 1 %> 
+      <% f2.fields_for :notas do |f3| %>
+	      <% f3.fields_for :tipo_nota do |f5| -%>
+	        <br />
+	        <%= f5.text_field :descripcion %>
+          <% end %>  	
+	    <%= f3.text_field :calificacion, :size => 1 %>
+	  <% end %>		     
+    <% end -%>
+    </div>
+  <% end -%>
+<% end -%>

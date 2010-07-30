@@ -1,0 +1,6 @@
+<div class="fields">
+  <% f.fields_for :notas do |fh| -%>
+    <%= debug(fh)%>
+    <%= fh.text_field :calificacion, :size => 1 %>
+  <% end %>
+</div>

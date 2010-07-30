@@ -41,7 +41,16 @@ class EstudiantesController < ApplicationController
 
   # GET /estudiantes/1/edit
   def edit
+    logger.debug "====>  #{params.inspect}" 
+ 
     @estudiante = Estudiante.find(params[:id])
+       if params[:tipo] == "notas" then 
+         render :action => "edit"
+       else
+             logger.debug " -------------> El otro"
+             render :action => "edit2"
+           end
+         
   end
 
   # POST /estudiantes

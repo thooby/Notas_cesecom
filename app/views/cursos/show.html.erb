@@ -29,7 +29,11 @@
   <b>Encargado docente:</b>
   <%=h @curso.docente.nombre_completo %>
 </p>
-
-
+<p>
+	  <b>Matriculados:</b><br />
+	<% @curso.estudiantes.each do |h| %>
+	<%= h.nombre1+" "+h.nombre2+" "+h.apellido1+" "+h.apellido2 %><br />
+	<% end %>
+<br />
 <%= link_to 'Editar', edit_curso_path(@curso) %> |
 <%= link_to 'Hacia atrás', cursos_path %>
